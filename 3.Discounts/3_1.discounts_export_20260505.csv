@@ -1,0 +1,368 @@
+Name,Value,Value Type,Type,Discount Class,Minimum Purchase Requirements,Combines with Order Discounts,Combines with Product Discounts,Combines with Shipping Discounts,Customer Selection,Context,Times Used In Total,Applies Once Per Customer,Usage Limit Per Code,Status,Start,End
+SG40,-40.0,percentage,Amount Off,order,,,,,all,all,5,,,Expired,2022-09-18 14:39:30 +0800,2022-10-13 10:08:02 +0800
+september,-58.0,percentage,Amount Off,order,,,,,all,all,72,,,Expired,2022-09-24 09:30:00 +0800,2022-10-01 12:00:00 +0800
+9f9abe1f833f,-20.0,percentage,Amount Off,order,10.0,,,,all,all,0,,1.0,Active,2022-09-24 02:06:29 +0800,
+bftksept,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 13:29:26 +0800,2022-10-01 00:00:29 +0800
+ACF,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 18:55:50 +0800,2022-12-31 23:59:55 +0800
+zijia,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 18:57:37 +0800,2022-12-31 23:59:57 +0800
+aidid,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 18:58:22 +0800,2022-12-31 23:59:58 +0800
+sheila,-20.0,percentage,Amount Off,order,,,,,all,all,1,,,Expired,2022-09-26 18:58:53 +0800,2022-12-31 23:59:58 +0800
+tammy,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 18:59:31 +0800,2023-12-31 23:59:59 +0800
+jane,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 19:00:04 +0800,2023-12-31 23:59:59 +0800
+kal,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 19:00:37 +0800,2022-12-31 23:59:59 +0800
+joshua,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 19:00:55 +0800,2022-12-31 23:59:59 +0800
+pamela,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 19:02:04 +0800,2023-12-31 23:59:59 +0800
+malcom,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-26 19:02:37 +0800,2022-12-31 23:59:59 +0800
+5e2f707444a3,-33.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2022-09-26 20:29:01 +0800,
+38a4441a530b,-33.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2022-09-26 22:52:43 +0800,
+ezbuylp,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-09-27 17:36:07 +0800,2022-10-01 23:59:59 +0800
+3403233a7fd3,-50.0,percentage,Amount Off,order,10.0,,,,all,all,0,,1.0,Active,2022-10-03 16:45:05 +0800,
+ardenxlush60,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2022-10-10 13:09:05 +0800,
+5de27d5102d9,-3.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2022-10-10 19:26:39 +0800,
+f45lp22,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-10-19 19:38:36 +0800,2022-12-19 19:38:38 +0800
+9e457c3e73ac,-10.0,percentage,Amount Off,order,10.0,,,,all,all,0,,1.0,Active,2022-10-21 16:48:39 +0800,
+fall,-15.0,percentage,Amount Off,order,,,,,all,all,8,,,Expired,2022-10-25 21:33:47 +0800,2022-10-29 23:59:59 +0800
+bfton20,-20.0,percentage,Amount Off,order,,,,,all,all,5,,,Expired,2022-10-26 11:20:20 +0800,2022-10-28 23:59:59 +0800
+Buy 2 Save 5%,-5.0,percentage,Amount Off,order,2.0,,,1.0,all,all,272,,,Expired,2022-10-28 21:57:19 +0800,2024-11-12 11:11:04 +0800
+Buy 4 Save 10%,-10.0,percentage,Amount Off,order,4.0,,,1.0,all,all,99,,,Expired,2022-10-28 21:57:59 +0800,2024-11-12 11:10:58 +0800
+SALE,-20.0,percentage,Amount Off,order,,,,,all,all,2,,,Expired,2022-11-09 16:18:00 +0800,2022-11-12 10:50:29 +0800
+BARRYSXLP,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2022-11-16 11:43:06 +0800,
+b7e6a35a2102,-1.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2022-11-25 13:03:04 +0800,2022-11-25 13:11:58 +0800
+R10TXLP,-25.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2022-12-05 14:52:43 +0800,2022-12-19 23:30:52 +0800
+R10T X LP 20221212,-20.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Expired,2022-12-09 18:37:24 +0800,2022-12-31 23:59:59 +0800
+$20 DISCOUNT CODE,-20.0,fixed_amount,Amount Off,order,,,,,all,all,3,,,Expired,2022-12-16 14:38:04 +0800,2023-01-31 23:59:59 +0800
+GIFT-CBSG,-39.9,fixed_amount,Amount Off,product,,,,,all,all,1,,1.0,Expired,2022-12-16 14:42:32 +0800,2023-01-31 14:42:42 +0800
+GIFT-H5KI,-39.9,fixed_amount,Amount Off,product,,,,,all,all,1,,1.0,Expired,2022-12-16 15:06:38 +0800,2023-01-31 23:59:59 +0800
+GIFT-RV9U,-39.9,fixed_amount,Amount Off,product,,,,,all,all,0,,1.0,Expired,2022-12-16 15:09:37 +0800,2023-01-31 23:59:59 +0800
+GIFT-BSKR,-39.9,fixed_amount,Amount Off,product,,,,,all,all,1,,1.0,Expired,2022-12-16 15:15:02 +0800,2023-01-31 23:55:15 +0800
+GIFT-68GD,-39.9,fixed_amount,Amount Off,product,,,,,all,all,1,,1.0,Expired,2022-12-16 15:16:02 +0800,2023-01-31 23:30:16 +0800
+GIFT-174G,-39.9,fixed_amount,Amount Off,product,,,,,all,all,0,,1.0,Expired,2022-12-16 15:16:44 +0800,2023-01-31 23:59:59 +0800
+GIFT-UD5F,-39.9,fixed_amount,Amount Off,product,,,,,all,all,0,,1.0,Expired,2022-12-16 15:17:40 +0800,2023-01-31 23:59:59 +0800
+GIFT-SFVB,-39.9,fixed_amount,Amount Off,product,,,,,all,all,0,,1.0,Expired,2022-12-16 15:18:17 +0800,2023-01-31 23:30:18 +0800
+GIFT-LOFP,-39.9,fixed_amount,Amount Off,product,,,,,all,all,0,,1.0,Expired,2022-12-17 10:31:07 +0800,2023-01-31 10:31:31 +0800
+GIFT-88BG,-39.9,fixed_amount,Amount Off,product,,,,,all,all,0,,1.0,Expired,2022-12-17 10:32:32 +0800,2023-01-31 23:59:59 +0800
+START,-15.0,percentage,Amount Off,order,,,,,all,all,14,,,Expired,2023-01-04 14:08:24 +0800,2023-02-13 23:59:59 +0800
+54d8882299d1,-3.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-01-22 09:14:39 +0800,
+isolate,-25.0,percentage,Amount Off,product,,,1.0,1.0,all,all,0,,,Expired,2023-02-08 15:32:55 +0800,2023-02-13 23:59:59 +0800
+af771f86a924,-10.0,percentage,Amount Off,order,10.0,,,,all,all,0,,1.0,Expired,2023-02-12 09:14:35 +0800,2023-03-11 16:08:38 +0800
+casein,-25.0,percentage,Amount Off,product,,,,,all,all,0,,,Expired,2023-02-19 22:10:20 +0800,2023-02-26 23:59:59 +0800
+welcome10,-10.0,percentage,Amount Off,order,,,,1.0,all,all,154,1.0,,Active,2023-02-22 14:27:34 +0800,
+FEB20,-20.0,percentage,Amount Off,order,,,,1.0,all,all,8,,,Expired,2023-02-24 13:01:54 +0800,2023-03-03 23:59:59 +0800
+amplifylush23,-20.0,percentage,Amount Off,order,,,,,all,all,1,,,Expired,2023-03-13 18:07:10 +0800,2023-03-31 23:59:59 +0800
+a49ba402d5f5,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Active,2023-03-23 08:36:24 +0800,
+FOURFOUR,-15.0,percentage,Amount Off,order,1.0,,,1.0,all,all,12,,,Expired,2023-04-03 12:21:46 +0800,2023-04-05 23:59:59 +0800
+f1e6072b79a5,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Expired,2023-04-04 13:53:47 +0800,2023-04-04 23:47:37 +0800
+f377fd072d97,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Active,2023-04-10 11:56:46 +0800,
+BFTON-8WC23,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2023-04-12 20:44:44 +0800,2023-04-30 23:59:59 +0800
+SeaGwaterpolo,-30.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2023-05-04 11:07:43 +0800,2023-05-31 23:59:59 +0800
+MAY,-15.0,percentage,Amount Off,order,,,,,all,all,10,,,Expired,2023-05-05 12:50:30 +0800,2023-05-09 23:30:50 +0800
+54c056e574a6,-1.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-05-07 23:36:54 +0800,
+df3e7ca60017,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Active,2023-05-11 21:53:10 +0800,
+98045c4cebc9,-6.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-05-15 18:57:28 +0800,
+STACYTEST,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2023-05-16 15:44:26 +0800,
+d30c69ebd766,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Expired,2023-05-29 08:18:21 +0800,2023-06-10 02:58:13 +0800
+PLANT10,-10.0,fixed_amount,Amount Off,product,,,1.0,1.0,all,all,5,,,Expired,2023-05-29 15:52:28 +0800,2023-06-02 23:30:52 +0800
+SSIOlivia20,-20.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2023-05-29 21:37:22 +0800,2023-08-31 23:59:37 +0800
+JUNE30,-30.0,fixed_amount,Amount Off,order,150.0,,,1.0,all,all,0,,,Expired,2023-06-05 17:24:22 +0800,2023-06-07 23:00:24 +0800
+ac95e38190ea,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Active,2023-06-06 21:45:58 +0800,
+35f52d95114b,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Active,2023-06-06 23:02:08 +0800,
+SHOPBACKTEST,-90.0,percentage,Amount Off,order,,,,,all,all,2,,,Active,2023-06-06 23:51:59 +0800,
+PNSNJ20,-15.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2023-06-06 23:57:49 +0800,2023-12-31 23:59:57 +0800
+REVF20-old,-20.0,percentage,Amount Off,order,,,,,all,all,6,,,Expired,2023-06-09 00:09:59 +0800,2024-12-31 23:59:59 +0800
+BFTKOV83,-25.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2023-06-17 00:00:49 +0800,2023-06-23 23:59:59 +0800
+coachk-old,-15.0,percentage,Amount Off,order,,,,,all,all,2,,,Expired,2023-06-16 00:09:09 +0800,2023-12-31 23:59:59 +0800
+b9a795a856dc,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-06-25 11:11:18 +0800,
+49f268618e9d,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-06-30 01:06:13 +0800,2023-06-30 01:15:50 +0800
+mitchs,-15.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2023-07-29 15:55:10 +0800,2024-06-30 23:59:59 +0800
+testcoupon,-100.0,percentage,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-08-01 18:48:22 +0800,2023-08-01 18:54:09 +0800
+FREESHIPTEST,-100.0,percentage,Free Shipping,shipping,,,,,all,all,0,,1.0,Active,2023-08-01 18:51:25 +0800,
+186ca6ea23ab,-6.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-08-02 15:23:38 +0800,2023-08-02 15:25:42 +0800
+32afb906f5d0,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-08-06 12:54:23 +0800,2023-08-06 13:03:50 +0800
+SGSportsAUG23,-35.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2023-08-10 16:47:35 +0800,2023-08-31 23:59:47 +0800
+3cde958493c2,-6.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-08-11 13:05:40 +0800,
+f1ee38fefd1d,-5.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-09-06 20:52:27 +0800,
+9ea9ed6bdcb3,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Active,2023-09-09 11:05:46 +0800,
+SGSportsSep,-30.0,percentage,Amount Off,order,,,,,all,all,1,,,Expired,2023-08-10 16:47:35 +0800,2023-09-30 23:59:59 +0800
+paultan23,-15.0,percentage,Amount Off,product,,,,,all,all,1,,,Active,2023-09-16 14:24:18 +0800,
+137e1222cb0f,-6.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-09-28 11:14:34 +0800,2023-09-29 16:53:33 +0800
+minjing,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-10-02 15:44:50 +0800,2024-12-31 23:59:59 +0800
+d3def329a30d,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-10-05 12:53:31 +0800,
+ivanlim,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-10-05 19:49:07 +0800,2023-12-31 19:49:49 +0800
+fcb909f9fcf0,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-10-05 22:28:52 +0800,
+a1bc334d7d94,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-10-05 22:45:23 +0800,
+a7f7a631c1a8,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Active,2023-10-05 23:14:04 +0800,
+1ab5abdb0cb0,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-10-06 06:45:35 +0800,
+0b6fed1e2469,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-10-06 11:00:24 +0800,
+1740614dad9a,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-10-07 17:36:52 +0800,
+AFFILIATE_003,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-10-10 10:27:33 +0800,2023-10-11 15:36:11 +0800
+56ca4a0d81dc,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-10-10 23:12:35 +0800,
+52c1c82790b4,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-10-11 15:55:30 +0800,
+9144e506baa1,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-10-16 21:14:10 +0800,
+95e61ba6de3c,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-10-18 01:30:06 +0800,
+46df22f55ca2,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-10-22 19:59:53 +0800,2023-10-22 20:04:41 +0800
+benchy,-15.0,percentage,Amount Off,order,,,,,all,all,5,,,Expired,2023-10-23 00:54:04 +0800,2024-10-23 00:54:54 +0800
+nattest,-99.0,fixed_amount,Amount Off,order,,,,,all,all,1,,,Active,2023-10-24 16:27:22 +0800,
+natfreeship,-100.0,percentage,Free Shipping,shipping,,,,,all,all,0,,,Active,2023-10-24 16:30:23 +0800,
+039c36123af6,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-10-24 23:17:53 +0800,
+964757222a38,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-10-25 09:12:47 +0800,
+398732a7353b,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-10-27 20:41:01 +0800,
+aa618b863d88,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-11-06 14:54:35 +0800,
+7c57fc308ff8,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-11-06 23:05:03 +0800,
+krissie,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+sonia,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+farezza,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+zully,-15.0,percentage,Amount Off,order,1.0,,,,all,all,1,,,Expired,2023-11-09 15:41:59 +0800,2024-12-31 23:59:59 +0800
+tifanis,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+caleb,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+tanct,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+abspandey,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+leeshin,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+wayne,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+zoeyxxy,-15.0,percentage,Amount Off,order,1.0,,,,all,all,0,,,Expired,2023-11-09 15:41:59 +0800,2023-12-31 23:59:59 +0800
+c699aa4f59c7,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-11-13 00:39:44 +0800,2023-11-13 16:18:55 +0800
+69dc504c56c1,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-11-13 01:32:09 +0800,2023-11-13 01:56:04 +0800
+P90020,-15.0,percentage,Amount Off,order,,,,1.0,all,all,2,,,Expired,2023-11-13 22:58:13 +0800,2024-12-31 22:58:58 +0800
+830522b9b71f,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-11-14 16:14:08 +0800,
+181390a6b6d0,-1.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-11-24 14:00:15 +0800,
+4728fb7c352a,-29.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-11-24 14:04:42 +0800,2023-11-24 14:08:05 +0800
+8dda67fa35b2,-31.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-11-24 14:52:44 +0800,2023-11-25 22:41:09 +0800
+8dd3df7d9efb,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,0,,1.0,Active,2023-11-24 14:59:10 +0800,
+88fe4a52b826,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-11-24 15:02:31 +0800,
+4074de698ed4,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-11-24 17:51:38 +0800,
+92dac4ff6081,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-11-25 21:28:29 +0800,2023-11-25 21:34:40 +0800
+9ee7fb986021,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-11-27 09:26:00 +0800,
+624c4ac120fd,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-12-01 17:57:09 +0800,
+92fd552f1407,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-12-08 23:31:29 +0800,
+fe485feb5781,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2023-12-14 16:24:53 +0800,
+e43049170a2c,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-12-17 20:41:48 +0800,2023-12-17 20:44:23 +0800
+d35bf3475b45,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2023-12-17 21:18:46 +0800,2023-12-17 21:23:08 +0800
+819ead242fbc,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2023-12-28 22:22:18 +0800,
+7c10abf3f001,-1.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2024-01-01 20:34:15 +0800,2024-01-01 20:43:39 +0800
+28ba2f8bde20,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2024-01-04 12:43:35 +0800,
+bad097fff015,-10.0,fixed_amount,Amount Off,order,20.0,,,,all,all,1,,1.0,Active,2024-01-06 22:37:18 +0800,
+6caab7b6fbe1,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2024-01-09 00:21:29 +0800,
+ABS15,-15.0,percentage,Amount Off,order,,,,,all,all,2,,,Expired,2024-01-15 22:41:14 +0800,2024-12-31 22:41:41 +0800
+20OFF-OLD,-20.0,fixed_amount,Amount Off,order,100.0,,,1.0,all,all,3,,,Expired,2024-01-23 19:39:30 +0800,2024-01-30 23:30:39 +0800
+0b7685358ad4,-6.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2024-01-24 20:43:42 +0800,
+ba0ffe75b30f,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-02-01 08:37:54 +0800,
+0ee8d19cf32e,-9.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2024-02-03 20:39:00 +0800,2024-02-03 20:45:16 +0800
+a0650438a0df,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2024-02-07 12:06:58 +0800,2024-02-07 17:28:14 +0800
+REF236c6b63637e,-30.0,fixed_amount,Amount Off,order,40.0,,,,all,all,1,,1.0,Active,2024-02-07 22:52:38 +0800,
+REFe7057ba9a910,-30.0,fixed_amount,Amount Off,order,40.0,,,,all,all,1,,1.0,Active,2024-02-17 13:03:07 +0800,
+REF3e81ca868db7,-30.0,fixed_amount,Amount Off,order,40.0,,,,all,all,1,,1.0,Active,2024-02-19 13:05:23 +0800,
+REFd471f286b08e,-30.0,fixed_amount,Amount Off,order,40.0,,,,all,all,0,,1.0,Active,2024-02-19 22:28:44 +0800,
+REF301fe476a248,-30.0,fixed_amount,Amount Off,order,40.0,,,,all,all,1,,1.0,Active,2024-02-19 22:36:36 +0800,
+Default program - DO NOT DELETE,-15.0,percentage,Amount Off,order,,,,,all,all,317,,,Active,2024-12-12 15:41:42 +0800,
+KOL Affiliate program - DO NOT DELETE,-15.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2024-03-06 17:46:59 +0800,
+be5504dff22c,-30.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-03-09 15:15:27 +0800,
+xtrailblazers,-20.0,percentage,Amount Off,order,,,,,all,all,1,,,Expired,2024-03-22 22:28:28 +0800,2024-03-29 23:59:59 +0800
+e519d7d2267c,-60.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-03-19 13:22:09 +0800,
+20OFF,-20.0,percentage,Amount Off,order,,,,1.0,all,all,39,,,Expired,2024-03-27 15:10:02 +0800,2024-04-01 03:00:10 +0800
+54e51c29642d,-1.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2024-03-31 23:14:58 +0800,2024-03-31 23:19:16 +0800
+APRIL44,-15.0,percentage,Amount Off,order,,,,1.0,all,all,4,,,Expired,2024-04-04 14:27:35 +0800,2024-04-05 23:30:59 +0800
+CORE15,-15.0,percentage,Amount Off,order,,,,,all,all,0,1.0,,Expired,2024-04-15 00:00:00 +0800,2024-12-31 23:59:59 +0800
+BARRYS20,-20.0,percentage,Amount Off,product,,,,,all,all,0,1.0,,Expired,2024-04-13 00:00:00 +0800,2024-04-20 23:59:59 +0800
+LP SG Affiliate Program - DO NOT DELETE,-15.0,percentage,Amount Off,order,,,,,all,all,0,1.0,,Active,2024-04-19 17:21:54 +0800,
+TEST PROGRAM - DO NOT DELETE,-15.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2024-04-25 17:58:36 +0800,
+SALE20,-20.0,percentage,Amount Off,order,,,,1.0,all,all,27,,,Expired,2024-04-26 22:29:36 +0800,2024-05-01 01:00:59 +0800
+c032bd9c05b6,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2024-04-27 16:45:41 +0800,2024-04-27 16:53:32 +0800
+SG Affiliates - Tier 2 - DO NOT DELETE,-15.0,percentage,Amount Off,order,,,1.0,,all,all,132,,,Active,2024-12-12 15:40:20 +0800,
+SG Affiliates - Tier 3 - DO NOT DELETE,-15.0,percentage,Amount Off,order,,,1.0,,all,all,0,1.0,,Active,2024-10-01 12:21:59 +0800,
+f1f33542ddd5acc3344746d990f6569f,-10.0,percentage,Amount Off,order,,,1.0,,all,all,0,,,Active,2024-05-23 20:40:46 +0800,
+d7abf29722e2,-10.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-05-25 15:54:23 +0800,
+MAY30,-30.0,percentage,Amount Off,order,,,,1.0,all,all,56,,,Expired,2024-05-26 22:37:29 +0800,2024-05-31 00:30:37 +0800
+17c669696604,-5.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-06-12 00:23:49 +0800,
+1acdac406cbf,-10.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-06-14 18:36:38 +0800,
+0a6dfbffb114,-10.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-06-18 08:37:57 +0800,
+5dcd516fe5a1,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2024-06-21 18:24:26 +0800,2024-06-21 18:26:17 +0800
+JUNE20,-20.0,percentage,Amount Off,order,,,,1.0,all,all,30,,,Expired,2024-06-26 22:21:24 +0800,2024-07-01 10:00:21 +0800
+4005d68310fa,-10.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-07-14 19:11:03 +0800,
+d01684847b8b,-30.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Active,2024-07-16 16:30:54 +0800,
+41c7c295cac3,-10.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-07-18 21:37:51 +0800,
+29b2a3758f5b,-5.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Active,2024-07-20 19:06:27 +0800,
+6c6aba3fcd07,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,,1.0,Expired,2024-07-22 17:32:31 +0800,2024-07-22 17:33:25 +0800
+BDAY40,-40.0,percentage,Amount Off,order,,,,,all,all,147,,,Expired,2024-07-27 21:54:08 +0800,2024-08-01 00:30:54 +0800
+FWE15,-15.0,fixed_amount,Amount Off,order,,,,,all,all,5,1.0,,Expired,2024-08-31 00:00:30 +0800,2024-09-14 23:59:59 +0800
+SPIN20,-20.0,fixed_amount,Amount Off,order,,,,,all,all,6,1.0,,Expired,2024-08-23 00:00:04 +0800,2024-08-31 23:59:59 +0800
+PHONE_001,-15.0,percentage,Amount Off,order,,,,,all,all,0,,1.0,Expired,2024-08-25 15:10:55 +0800,2024-12-31 23:59:59 +0800
+25OFF,-25.0,fixed_amount,Amount Off,order,100.0,,,,all,all,13,,,Expired,2024-08-27 19:27:53 +0800,2024-09-01 01:00:59 +0800
+FWE25,-25.0,percentage,Amount Off,order,,,,,all,all,0,1.0,,Expired,2024-08-31 09:06:24 +0800,2024-09-14 23:59:59 +0800
+BFTONENORTH,-15.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2024-09-06 21:59:53 +0800,2024-12-31 21:59:59 +0800
+Indo - Default Program Tier 1 - DO NOT DELETE,-15.0,percentage,Amount Off,order,,,1.0,,all,all,4,,,Active,2024-12-02 10:24:08 +0800,
+3030,-30.0,percentage,Amount Off,order,,,,,all,all,42,,,Expired,2024-09-26 18:57:38 +0800,2024-10-01 01:00:30 +0800
+SGAFF100,-100.0,percentage,Amount Off,order,,,,,all,all,88,,100.0,Expired,2024-10-11 09:06:06 +0800,2025-06-19 20:44:05 +0800
+INDOAFF100,-100.0,percentage,Amount Off,order,,,,,all,all,7,1.0,,Expired,2024-10-11 09:06:06 +0800,2025-06-19 11:08:58 +0800
+SALE30,-30.0,percentage,Amount Off,product,,,,,all,all,10,,,Expired,2024-10-27 22:24:09 +0800,2024-11-01 01:00:24 +0800
+BF40,-40.0,percentage,Amount Off,product,,,1.0,,all,all,65,,,Expired,2024-11-26 19:06:50 +0800,2024-12-01 03:00:59 +0800
+shadowflame40,-40.0,percentage,Amount Off,order,,,,,all,all,1,,1.0,Expired,2024-12-12 14:57:57 +0800,2024-12-20 23:59:59 +0800
+GYMCON100,-100.0,percentage,Amount Off,order,,,,,all,all,6,,10.0,Active,2024-12-20 05:16:38 +0800,
+Default program - DO NOT DELETE,-10.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2025-01-03 22:32:47 +0800,
+dzarrin2025,-30.0,percentage,Amount Off,order,,,,,all,all,2,,,Active,2025-01-10 10:34:35 +0800,
+B2B100,-100.0,percentage,Amount Off,order,,,,,all,all,49,,50.0,Active,2025-01-14 11:26:36 +0800,
+EVENT100,-100.0,percentage,Amount Off,order,,,,,all,all,1,,20.0,Active,2025-01-22 11:26:26 +0800,
+DEX11,-10.0,percentage,Amount Off,order,,,,,all,all,2,,,Active,2025-02-05 12:14:36 +0800,
+AMALIA,-15.0,percentage,Amount Off,order,,,,,all,all,0,,1.0,Expired,2025-02-06 15:08:54 +0800,2025-04-30 23:59:59 +0800
+teamfty,-12.0,percentage,Amount Off,order,,,,,all,all,21,,,Active,2025-02-11 19:30:28 +0800,
+MICHELLEHUIHUI,-10.0,percentage,Amount Off,order,,,,,all,all,2,,,Active,2025-02-12 09:59:47 +0800,
+vinnytan,-10.0,percentage,Amount Off,order,,,,,all,all,7,,,Active,2025-02-14 16:19:14 +0800,
+MAE10,-10.0,percentage,Amount Off,order,,,,,all,all,2,,,Active,2025-02-14 16:22:14 +0800,
+NELSON96870,-10.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2025-02-18 12:41:26 +0800,
+MARISSAXLUSH25,-10.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2025-02-18 12:46:37 +0800,2025-02-18 15:19:59 +0800
+MARISSAXLUSH10,-10.0,percentage,Amount Off,order,,,,,all,all,5,,,Active,2025-02-18 15:19:34 +0800,
+JESSIE36871,-10.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2025-02-19 10:32:22 +0800,
+YOWKEEPFIT,-10.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2025-02-19 11:18:08 +0800,
+LEAN10,-10.0,percentage,Amount Off,product,,,,,all,all,0,,,Expired,2025-02-19 23:15:32 +0800,2025-02-24 23:59:15 +0800
+TIKTOK100,-100.0,percentage,Amount Off,order,,,,,all,all,1,,50.0,Active,2025-02-25 09:06:06 +0800,
+Hkfitness15,-10.0,percentage,Amount Off,order,,,,,all,all,1,,,Active,2025-03-03 16:53:41 +0800,
+EPURE20,-20.0,percentage,Amount Off,order,,,,,all,all,6,1.0,100.0,Expired,2025-03-23 00:00:30 +0800,2025-04-30 23:59:59 +0800
+EDWARDC,-10.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2025-03-07 07:41:25 +0800,
+Loox Photo/Video Reviews: LX-HPR6IF,-5.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,1.0,Expired,2025-03-07 21:45:51 +0800,2025-04-07 07:59:59 +0800
+AFFCOUPON,-10.0,percentage,Amount Off,order,,,,1.0,all,all,261,,,Active,2025-03-08 17:34:23 +0800,
+HyroxFH2025,-100.0,percentage,Amount Off,product,,,,,all,all,3,,,Expired,2025-03-11 09:49:56 +0800,2025-06-30 23:59:59 +0800
+EliteShaker,-100.0,percentage,Amount Off,product,1.0,,,,all,all,0,,,Expired,2025-03-17 14:18:30 +0800,2025-03-31 23:59:59 +0800
+Buy 1 Free 1 Single Serve Sachet + FREE Shipping!,-100.0,percentage,Buy X Get Y,product,,,,,all,all,9,,,Expired,2025-03-18 20:19:23 +0800,2025-03-24 23:59:59 +0800
+CAROLINE,-10.0,percentage,Amount Off,order,,,,,all,all,1,,,Active,2025-03-20 12:47:20 +0800,
+10OFF,-10.0,percentage,Amount Off,order,,,,,all,all,2,,,Active,2025-03-27 01:00:38 +0800,
+VANESSACCL,-15.0,percentage,Amount Off,order,,,,,all,all,20,,,Active,2025-03-26 15:06:25 +0800,
+AFFILIATE_002,-30.0,fixed_amount,Amount Off,product,60.0,,,,all,all,0,,1.0,Expired,2025-03-27 11:53:29 +0800,2025-04-30 11:53:53 +0800
+AFFILIATE_005,-21.0,percentage,Amount Off,product,,,,,all,all,1,,,Active,2025-04-02 11:32:47 +0800,
+LUSHLOVESYONGSHENG,-15.0,percentage,Amount Off,order,,,,,all,all,1,,1.0,Active,2025-04-02 22:14:18 +0800,
+Loox Photo/Video Reviews: LX-VQNXCA,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-04-03 12:43:22 +0800,2025-05-04 07:59:59 +0800
+Loox Photo/Video Reviews: LX-QZR1VU,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-04-10 09:41:49 +0800,2025-05-11 07:59:59 +0800
+HKAFF100,-100.0,percentage,Amount Off,order,,,,,all,all,16,,50.0,Expired,2025-04-10 09:06:06 +0800,2025-06-19 20:43:56 +0800
+Loox Photo/Video Reviews: LX-DFH9LD,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-04-12 13:31:03 +0800,2025-05-13 07:59:59 +0800
+Loox Photo/Video Reviews: LX-Z89TZS,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-04-12 13:31:51 +0800,2025-05-13 07:59:59 +0800
+Loox Photo/Video Reviews: LX-MIV1QE,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-04-12 13:32:35 +0800,2025-05-13 07:59:59 +0800
+SHOOT100,-100.0,percentage,Amount Off,order,,,,,all,all,5,,20.0,Active,2025-04-21 12:16:32 +0800,
+GIFTSHOOT100,-100.0,percentage,Amount Off,order,,,,,all,all,0,,30.0,Active,2025-04-21 13:33:22 +0800,
+Loox Photo/Video Reviews: LX-HSCLTE,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-04-26 10:49:54 +0800,2025-05-27 07:59:59 +0800
+MYAFF100,-100.0,percentage,Amount Off,order,,,,,all,all,26,,50.0,Expired,2024-10-11 09:06:06 +0800,2025-06-19 20:44:26 +0800
+Loox Photo/Video Reviews: LX-USMOQO,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-05-03 19:29:38 +0800,2025-06-03 07:59:59 +0800
+Loox Photo/Video Reviews: LX-6KF8XG,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-05-04 12:38:27 +0800,2025-06-04 07:59:59 +0800
+SHIPFREE,-100.0,percentage,Free Shipping,shipping,,1.0,1.0,,all,all,0,1.0,,Active,2025-05-04 23:29:18 +0800,
+Loox Photo/Video Reviews: LX-5OSXF5,-10.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,1.0,Expired,2025-05-05 12:20:50 +0800,2025-06-05 07:59:59 +0800
+Loox Photo/Video Reviews: LX-WRG0EC,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-05-05 15:41:10 +0800,2025-06-05 07:59:59 +0800
+Loox Photo/Video Reviews: LX-RSBIER,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-05-11 23:28:09 +0800,2025-06-11 07:59:59 +0800
+Loox Photo/Video Reviews: LX-5CUSMM,-5.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,1.0,Expired,2025-05-16 15:09:20 +0800,2025-06-16 07:59:59 +0800
+START15,-15.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2025-05-21 22:56:17 +0800,2025-05-25 23:59:56 +0800
+FREESHIPCP,-100.0,percentage,Free Shipping,shipping,,,1.0,,all,all,0,1.0,,Active,2025-05-22 10:45:06 +0800,
+FREESHIPLP,-100.0,percentage,Free Shipping,shipping,,,1.0,,all,all,0,1.0,,Active,2025-05-22 11:32:21 +0800,
+SSI2025,-20.0,percentage,Amount Off,product,,,,,all,all,1,,,Expired,2025-05-24 22:41:12 +0800,2025-06-13 15:49:58 +0800
+Lynnhong,-15.0,percentage,Amount Off,order,,,,,all,all,1,,1.0,Active,2025-05-29 20:47:32 +0800,
+Loox Photo/Video Reviews: LX-Q0Q18U,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-05-31 18:33:46 +0800,2025-07-01 07:59:59 +0800
+LFGMEA,-10.0,percentage,Amount Off,order,,,,,all,all,0,,,Active,2025-06-04 13:15:18 +0800,
+daryl15,-15.0,percentage,Amount Off,order,,,,,all,all,0,,1.0,Expired,2025-06-05 13:33:19 +0800,2025-08-31 13:33:33 +0800
+CINDYCHEE,-20.0,percentage,Amount Off,order,,,,,all,all,1,,,Active,2025-06-12 17:39:19 +0800,
+Loox Photo/Video Reviews: LX-5JN7LX,-5.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,1.0,Expired,2025-06-13 11:05:18 +0800,2025-07-14 07:59:59 +0800
+Loox Photo/Video Reviews: LX-JUNGDK,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-06-16 14:01:55 +0800,2025-07-17 07:59:59 +0800
+ENERGY10,-10.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2025-06-17 11:30:39 +0800,2025-06-22 23:59:59 +0800
+SGHYROX100,-100.0,percentage,Amount Off,order,,,,,all,all,3,,,Active,2024-10-11 09:06:06 +0800,
+Loox Photo/Video Reviews: LX-J0NQ24,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-06-22 22:31:45 +0800,2025-07-23 07:59:59 +0800
+Loox Photo/Video Reviews: LX-7MHSD5,-10.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,1.0,Expired,2025-06-23 08:44:02 +0800,2025-07-24 07:59:59 +0800
+Loox Photo/Video Reviews: LX-L6G80S,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-06-24 16:03:25 +0800,2025-07-25 07:59:59 +0800
+Loox Photo/Video Reviews: LX-HV5Y2X,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-06-27 19:06:29 +0800,2025-07-28 07:59:59 +0800
+Loox Photo/Video Reviews: LX-VT6X7P,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-06-30 11:13:40 +0800,2025-07-31 07:59:59 +0800
+Loox Photo/Video Reviews: LX-YPBZU2,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-07-02 18:14:51 +0800,2025-08-02 07:59:59 +0800
+EW2025,-10.0,percentage,Amount Off,order,,1.0,,,all,all,11,1.0,,Active,2025-07-07 18:00:03 +0800,2026-12-31 23:59:59 +0800
+HK15,-15.0,percentage,Amount Off,order,,,,,all,all,51,,,Expired,2025-07-08 22:16:43 +0800,2025-07-12 01:00:59 +0800
+CHERYL15,-15.0,percentage,Amount Off,order,,,,,all,all,0,,1.0,Expired,2025-07-14 15:53:42 +0800,2025-07-16 01:00:00 +0800
+FWEHK10,-10.0,percentage,Amount Off,order,,,,,all,all,2,1.0,,Expired,2025-07-26 00:00:15 +0800,2025-09-30 23:59:59 +0800
+FREEMAN15,-15.0,percentage,Amount Off,order,,,,,all,all,0,,1.0,Expired,2025-07-15 14:52:27 +0800,2025-07-16 01:00:00 +0800
+BIRTHDAYSALE,-15.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2025-07-15 00:01:01 +0800,2025-07-15 23:58:20 +0800
+Loox Photo/Video Reviews: LX-FBV1G2,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-07-16 11:25:27 +0800,2025-08-16 07:59:59 +0800
+Loox Photo/Video Reviews: LX-AXP37N,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-07-21 14:43:05 +0800,2025-08-21 07:59:59 +0800
+SS10,-10.0,percentage,Amount Off,order,,,,,all,all,3,1.0,,Expired,2025-07-26 00:00:15 +0800,2025-09-30 23:59:59 +0800
+LUCKYDRAW10,-10.0,percentage,Amount Off,order,,,,,all,all,1,1.0,,Expired,2025-07-26 00:00:15 +0800,2025-09-30 23:59:59 +0800
+Loox Photo/Video Reviews: LX-8AJJKO,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-07-25 11:37:47 +0800,2025-08-25 07:59:59 +0800
+Loox Photo/Video Reviews: LX-M6LFRX,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-07-25 11:39:25 +0800,2025-08-25 07:59:59 +0800
+Loox Photo/Video Reviews: LX-8LY3YN,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-07-25 11:40:26 +0800,2025-08-25 07:59:59 +0800
+Loox Photo/Video Reviews: LX-J94ZRC,-5.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,1.0,Expired,2025-07-25 11:41:26 +0800,2025-08-25 07:59:59 +0800
+Loox Photo/Video Reviews: LX-4A99IP,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-07-28 18:57:49 +0800,2025-08-28 07:59:59 +0800
+Loox Photo/Video Reviews: LX-N3YEOX,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-07-29 21:22:20 +0800,2025-08-29 07:59:59 +0800
+TYPHOON25,-25.0,percentage,Amount Off,order,,,,,all,all,2,,,Expired,2025-08-06 00:00:16 +0800,2025-08-12 23:59:59 +0800
+VT25FS,-100.0,percentage,Amount Off,product,,,,,prerequisite,segment,33,1.0,,Expired,2025-08-10 15:00:42 +0800,2025-08-18 17:37:41 +0800
+SSC10,-10.0,percentage,Amount Off,order,,,,,all,all,1,,50.0,Expired,2025-08-18 12:07:49 +0800,2025-12-31 00:00:59 +0800
+LPTAG5,-5.0,fixed_amount,Amount Off,product,,,,,all,all,0,1.0,,Expired,2025-08-19 13:50:34 +0800,2025-12-31 23:30:50 +0800
+COWAY10,-10.0,percentage,Amount Off,order,,,,,all,all,0,1.0,,Expired,2025-07-26 00:00:15 +0800,2025-10-31 23:59:59 +0800
+CRAZYRUN15,-15.0,percentage,Amount Off,order,,,,,all,all,1,,,Expired,2025-08-20 00:00:00 +0800,2025-08-27 23:59:59 +0800
+APA15,-15.0,percentage,Amount Off,order,,,,,all,all,0,,,Expired,2025-08-22 00:00:00 +0800,2025-08-28 23:59:59 +0800
+Loox Photo/Video Reviews: LX-OD6YD1,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-08-25 13:23:04 +0800,2025-09-25 07:59:59 +0800
+Loox Photo/Video Reviews: LX-TSJASG,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-08-25 13:26:40 +0800,2025-09-25 07:59:59 +0800
+HUSTLE15,-15.0,percentage,Amount Off,order,,,,,all,all,2,,,Expired,2025-08-26 00:00:00 +0800,2025-09-07 23:59:59 +0800
+BFTGB15,-15.0,percentage,Amount Off,order,,,,,all,all,4,,,Expired,2025-09-01 00:00:00 +0800,2025-09-07 23:59:59 +0800
+ZEST15,-15.0,percentage,Amount Off,order,,,1.0,,all,all,0,,,Expired,2025-09-03 00:00:00 +0800,2025-09-09 23:59:59 +0800
+JapanLP2025,-100.0,percentage,Amount Off,product,,,,,all,all,0,,6.0,Expired,2025-09-05 09:29:26 +0800,2025-09-09 23:59:29 +0800
+Loox Photo/Video Reviews: LX-EZ034F,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-09-06 18:38:26 +0800,2025-10-07 07:59:59 +0800
+AFFILIATE_009,-100.0,percentage,Free Shipping,shipping,,,,,all,all,0,,1.0,Expired,2025-09-08 18:49:01 +0800,2025-09-30 18:49:49 +0800
+EVO FITNESS CHALLENGE - Aug 2025,-10.0,fixed_amount,Amount Off,order,,,,,all,all,3,1.0,1.0,Expired,2025-09-10 17:23:24 +0800,2025-10-15 23:59:59 +0800
+TEVA15,-15.0,percentage,Amount Off,order,,,1.0,,all,all,0,,,Expired,2025-09-12 00:00:00 +0800,2025-09-30 23:59:59 +0800
+REVLKL20,-20.0,percentage,Amount Off,order,,,,1.0,all,all,0,1.0,,Expired,2025-09-17 10:55:03 +0800,2025-09-25 01:00:55 +0800
+UpPromote discount function - DO NOT DELETE,,app,App Discount,multiple,,,,,all,all,0,,,Active,2025-09-23 16:38:42 +0800,
+AMBXOCT,-250.0,fixed_amount,Amount Off,order,,,,,prerequisite,customer,6,1.0,,Expired,2025-10-02 17:32:20 +0800,2025-10-31 23:59:32 +0800
+AMBXNOV,-250.0,fixed_amount,Amount Off,order,,,,,prerequisite,customer,6,1.0,,Expired,2025-11-01 00:00:32 +0800,2025-11-30 23:59:59 +0800
+AMBXDEC,-250.0,fixed_amount,Amount Off,order,,,,,prerequisite,customer,5,1.0,,Expired,2025-11-01 00:00:32 +0800,2026-01-05 23:59:59 +0800
+CROSSFITKAMPUNG15,-15.0,percentage,Amount Off,order,,,1.0,,all,all,0,,,Expired,2025-10-11 00:00:00 +0800,2025-10-17 23:59:59 +0800
+LushVictoryNov25,-100.0,percentage,Buy X Get Y,product,,,1.0,,prerequisite,segment,0,1.0,,Expired,2025-11-15 00:00:39 +0800,2025-11-30 23:59:59 +0800
+Sep 2025 Fitness Challenge Winners,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-10-31 16:34:24 +0800,2025-11-15 23:59:59 +0800
+MORPH15,-15.0,percentage,Amount Off,order,,,,1.0,all,all,0,1.0,,Expired,2025-11-07 10:55:55 +0800,2025-11-17 01:00:59 +0800
+WCH15,-15.0,percentage,Amount Off,order,,,1.0,,all,all,0,,,Expired,2025-11-14 00:00:00 +0800,2025-11-20 23:59:59 +0800
+BLACKFRIDAY,-15.0,percentage,Amount Off,order,,,,,all,all,63,,,Expired,2025-11-26 20:56:37 +0800,2025-12-03 00:30:30 +0800
+nick15,-15.0,percentage,Amount Off,order,,,,,all,all,1,,1.0,Active,2025-12-02 23:53:11 +0800,
+AFFILIATE_006,-10.0,percentage,Amount Off,order,,,,,all,all,1,,1.0,Expired,2025-12-04 17:47:06 +0800,2025-12-08 17:47:47 +0800
+ANYAGIFTS,-100.0,percentage,Buy X Get Y,product,,,,1.0,all,all,0,1.0,,Active,2025-12-12 15:47:16 +0800,
+Loox Photo/Video Reviews: LX-6IPKSA,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2025-12-17 18:21:40 +0800,2026-01-17 07:59:59 +0800
+sephine73,-20.0,percentage,Amount Off,order,,,,,all,all,0,,1.0,Active,2025-12-18 16:55:14 +0800,
+AMBXJAN,-250.0,fixed_amount,Amount Off,order,,,,,prerequisite,customer,4,1.0,,Expired,2026-01-09 00:00:00 +0800,2026-02-05 23:59:59 +0800
+AMBXFEB,-250.0,fixed_amount,Amount Off,order,,,,,prerequisite,customer,5,1.0,,Expired,2026-02-01 00:00:00 +0800,2026-02-28 23:59:59 +0800
+AMBXMAR,-250.0,fixed_amount,Amount Off,order,,,,,prerequisite,customer,6,1.0,,Expired,2026-03-01 00:00:00 +0800,2026-04-01 23:59:59 +0800
+AMBXJANSTEPH,-250.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Expired,2026-01-09 00:00:00 +0800,2026-02-05 23:59:59 +0800
+AFFILIATE_008,-5.0,percentage,Amount Off,order,,,,,all,all,1,,1.0,Active,2026-01-23 17:17:57 +0800,
+AFFILIATE_007,-100.0,percentage,Free Shipping,shipping,,,,,all,all,1,,1.0,Active,2026-01-26 12:44:18 +0800,
+Kaching Bundles - Lean Protein Bundle and 4 others,,app,App Discount,product,,1.0,1.0,1.0,all,all,137,,,Active,2026-01-26 18:10:33 +0800,
+Kaching Bundles - Soy Bundle and 4 others,,app,App Discount,product,,1.0,1.0,1.0,all,all,136,,,Active,2026-01-27 13:42:33 +0800,
+AFFILIATE_001,-100.0,percentage,Free Shipping,shipping,,,,,all,all,1,,1.0,Expired,2026-02-04 11:53:43 +0800,2026-02-28 11:53:53 +0800
+REVLW68S,-50.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVL75XA,-50.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVL78GA,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLXQSM,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLF1B9,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLPWAF,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLXSW6,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVL69GB,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLV2XD,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLNA3V,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLV3BK,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVL75PH,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLYHP9,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLKB66,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVL1NPH,-50.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVL4NFQ,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVLYWMM,-50.0,fixed_amount,Amount Off,order,,,,,all,all,1,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+REVL7HG8,-50.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,,Active,2026-02-04 11:54:41 +0800,2026-06-30 23:30:54 +0800
+Loox Photo/Video Reviews: LX-4P61OH,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2026-02-07 11:23:32 +0800,2026-03-10 07:59:59 +0800
+Loox Photo/Video Reviews: LX-YTSNMY,-10.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2026-02-07 11:24:47 +0800,2026-03-10 07:59:59 +0800
+darylchia,-10.0,percentage,Amount Off,order,,,,,all,all,1,,1.0,Expired,2026-02-08 23:09:45 +0800,2026-02-11 23:59:59 +0800
+Kaching Bundles - Creatine Bundle (MY) and 4 others,,app,App Discount,product,,1.0,1.0,1.0,all,all,56,,,Active,2026-02-09 17:01:47 +0800,
+Kaching Bundles - PEACH OOLONG (MY),,app,App Discount,product,,1.0,1.0,1.0,all,all,30,,,Active,2026-02-10 01:03:18 +0800,
+TESTXWENDY202602,-130.0,fixed_amount,Amount Off,order,,1.0,,1.0,all,all,1,,1.0,Expired,2026-02-12 15:47:22 +0800,2026-02-28 23:30:47 +0800
+TESTXWENDY202603,-130.0,fixed_amount,Amount Off,order,,1.0,,1.0,all,all,1,,1.0,Expired,2026-02-28 15:47:47 +0800,2026-03-31 23:30:30 +0800
+TESTXKENNETH202604,-130.0,fixed_amount,Amount Off,order,,1.0,,1.0,all,all,0,,1.0,Expired,2026-03-31 15:47:47 +0800,2026-04-01 13:00:59 +0800
+TESTXKENNETH202602,-130.0,fixed_amount,Amount Off,order,,1.0,,1.0,all,all,0,,1.0,Expired,2026-02-12 15:47:22 +0800,2026-02-28 23:30:47 +0800
+TESTXKENNETH202603,-130.0,fixed_amount,Amount Off,order,,1.0,,1.0,all,all,0,,1.0,Expired,2026-02-28 15:47:47 +0800,2026-03-31 23:30:30 +0800
+TESTXMAEVONNE202602,-100.0,fixed_amount,Amount Off,order,,1.0,,1.0,all,all,1,,1.0,Expired,2026-02-12 15:47:22 +0800,2026-02-28 23:30:47 +0800
+TESTXMAEVONNE202603,-100.0,fixed_amount,Amount Off,order,,1.0,,1.0,all,all,1,,1.0,Expired,2026-02-28 15:47:47 +0800,2026-04-05 23:30:30 +0800
+TESTXWENDY202604,-130.0,fixed_amount,Amount Off,order,,1.0,,1.0,all,all,0,,1.0,Active,2026-03-31 15:47:47 +0800,2026-04-30 23:59:59 +0800
+TESTXMAEVONNE202604,-100.0,fixed_amount,Amount Off,order,,1.0,,1.0,all,all,0,,1.0,Active,2026-03-31 15:47:47 +0800,2026-04-30 23:59:59 +0800
+FMCAP-HANNAH,-80.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Expired,2026-02-24 17:48:54 +0800,2026-03-15 23:59:59 +0800
+FMCAP-ASHLEY,-80.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Expired,2026-02-24 17:48:54 +0800,2026-03-15 23:59:59 +0800
+FMCAP-RICHA,-80.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Expired,2026-02-24 17:48:54 +0800,2026-03-15 23:59:59 +0800
+FMCAP-PETRINA,-80.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Expired,2026-02-24 17:48:54 +0800,2026-03-15 23:59:59 +0800
+FMCAP-ELAIN,-80.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Expired,2026-02-24 17:48:54 +0800,2026-03-15 23:59:59 +0800
+FMCAP-SHUMIN,-80.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Expired,2026-02-24 17:48:54 +0800,2026-03-15 23:59:59 +0800
+FMCAP-CYRIELLE,-80.0,fixed_amount,Amount Off,order,,,,,all,all,1,,1.0,Expired,2026-02-24 17:48:54 +0800,2026-03-15 23:59:59 +0800
+Loox Photo/Video Reviews: LX-41KX6M,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Expired,2026-03-02 18:16:16 +0800,2026-04-02 07:59:59 +0800
+Loox Photo/Video Reviews: LX-O3KNRZ,-5.0,fixed_amount,Amount Off,order,,,,,all,all,0,1.0,1.0,Active,2026-03-09 17:51:31 +0800,2026-04-09 07:59:59 +0800
+SSI2026,-15.0,percentage,Amount Off,product,,,,,all,all,0,,,Active,2026-03-11 16:30:18 +0800,2026-12-31 23:59:30 +0800
+JIMMY,-15.0,percentage,Amount Off,order,,,,1.0,all,all,1,,3.0,Active,2026-03-12 15:10:16 +0800,
+EVO2025,-10.0,percentage,Amount Off,order,,,,,all,all,1,1.0,,Active,2026-03-13 17:54:39 +0800,2026-07-31 17:54:54 +0800
+AFFILIATE_004,-100.0,percentage,Free Shipping,shipping,,,,,all,all,1,,1.0,Active,2026-03-19 11:44:02 +0800,

@@ -1,0 +1,16 @@
+# Data folders - generated outputs
+medallion/
+
+# File types
+*.parquet
+*.xlsx
+*.csv
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store
+~$*

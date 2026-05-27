@@ -134,6 +134,15 @@ erDiagram
   silver_recharge_churned }o--|| silver_customer_id_bridge : "customer_id"
   silver_recharge_reactivated }o--|| silver_customer_id_bridge : "customer_id"
   silver_orders }o--|| silver_customer_id_bridge : "Customer: ID to shopify_customer_id"
+  silver_orders ||--o{ silver_order_discounts_lookup : discounts
+  silver_orders }o--|| silver_products : sku
+  silver_recharge_orders ||--o{ silver_recharge_order_items : items
+  silver_recharge_orders ||--o{ silver_recharge_recurring : recurring
+  silver_recharge_orders }o--|| silver_orders : shopify_order
+  silver_recharge_orders }o--|| silver_customer_id_bridge : bridge
+  silver_recharge_churned }o--|| silver_customer_id_bridge : bridge
+  silver_recharge_reactivated }o--|| silver_customer_id_bridge : bridge
+  silver_customer_id_bridge ||--o{ silver_orders : shopify_orders
 ```
 
 ---
@@ -370,6 +379,14 @@ erDiagram
   gold_customer_orders ||--o{ gold_churn_features : "survival"
   gold_customer_profiles ||--o{ gold_geographic_segments : "customer_id"
   gold_customer_orders ||--o{ gold_retention_cohorts : "cohort"
+  gold_customer_profiles ||--o{ gold_customer_orders : customer_id
+  gold_customer_orders ||--o{ gold_first_order_products : first_order
+  gold_customer_orders ||--o{ gold_discount_analysis : order_id
+  gold_customer_profiles ||--o{ gold_discount_analysis : ltv
+  gold_customer_profiles ||--|| gold_churn_features : customer_id
+  gold_customer_orders ||--o{ gold_churn_features : survival
+  gold_customer_profiles ||--|| gold_geographic_segments : customer_id
+  gold_customer_orders ||--o{ gold_retention_cohorts : cohort
 ```
 
 ---
@@ -455,4 +472,23 @@ erDiagram
   gold_customer_orders ||--o{ gold_churn_features : "survival"
   gold_customer_profiles ||--o{ gold_geographic_segments : "customer_id"
   gold_customer_orders ||--o{ gold_retention_cohorts : "cohort"
+```
+  silver_orders }o--|| gold_customer_orders : builds
+  silver_order_discounts_lookup ||--o{ gold_customer_orders : enriches
+  silver_products ||--o{ gold_first_order_products : sku
+  silver_customer_id_bridge ||--o{ gold_churn_features : is_subscriber
+  silver_recharge_orders ||--|| gold_subscription_behaviour : customer_id
+  silver_recharge_churned ||--o{ gold_subscription_behaviour : churn
+  silver_recharge_reactivated ||--o{ gold_subscription_behaviour : reactivated
+  silver_customer_id_bridge ||--o{ gold_subscription_behaviour : bridge
+
+  %% Gold Internal Connections
+  gold_customer_orders ||--|| gold_customer_profiles : customer_id
+  gold_customer_orders ||--o{ gold_first_order_products : first_order
+  gold_customer_orders ||--o{ gold_discount_analysis : order_id
+  gold_customer_profiles ||--o{ gold_discount_analysis : ltv
+  gold_customer_profiles ||--|| gold_churn_features : customer_id
+  gold_customer_orders ||--o{ gold_churn_features : survival
+  gold_customer_profiles ||--o{ gold_geographic_segments : customer_id
+  gold_customer_orders ||--o{ gold_retention_cohorts : cohort
 ```

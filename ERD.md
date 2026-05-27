@@ -1,6 +1,6 @@
 # LushProtein Database Schema (ERD)
 
-This document contains the Entity-Relationship Diagrams (ERDs) for the LushProtein customer database, split into logical layers (Silver and Gold) for readability, followed by a unified diagram.
+This document contains the Entity-Relationship Diagrams (ERDs) for the LushProtein customer database, split into logical layers (Silver and Gold) for readability, followed by a unified diagram. 
 
 ---
 
@@ -9,6 +9,8 @@ The Silver layer contains cleaned and structured data directly ingested from sou
 
 ```mermaid
 erDiagram
+  direction LR
+
   silver_orders {
     string ID PK "Shopify Order ID"
     string Customer_ID FK "Shopify Customer ID (Customer: ID)"
@@ -123,6 +125,15 @@ erDiagram
   }
 
   %% Silver Relationships
+  silver_orders ||--o{ silver_order_discounts_lookup : "ID to order_id"
+  silver_orders }o--|| silver_products : "Line: Variant SKU to Variant SKU"
+  silver_recharge_orders ||--o{ silver_recharge_order_items : "recharge_order_id"
+  silver_recharge_orders ||--o{ silver_recharge_recurring : "recharge_order_id"
+  silver_recharge_orders }o--|| silver_orders : "shopify_order_id to ID"
+  silver_recharge_orders }o--|| silver_customer_id_bridge : "customer_id"
+  silver_recharge_churned }o--|| silver_customer_id_bridge : "customer_id"
+  silver_recharge_reactivated }o--|| silver_customer_id_bridge : "customer_id"
+  silver_orders }o--|| silver_customer_id_bridge : "Customer: ID to shopify_customer_id"
   silver_orders ||--o{ silver_order_discounts_lookup : discounts
   silver_orders }o--|| silver_products : sku
   silver_recharge_orders ||--o{ silver_recharge_order_items : items
@@ -141,6 +152,8 @@ The Gold layer contains consolidated, high-value tables optimized for business i
 
 ```mermaid
 erDiagram
+  direction LR
+
   gold_customer_orders {
     string order_id PK "Shopify Order ID"
     string order_name "Order Name (LPSG-XXXX)"
@@ -358,6 +371,14 @@ erDiagram
   }
 
   %% Gold Relationships
+  gold_customer_orders ||--|| gold_customer_profiles : "customer_id"
+  gold_customer_orders ||--o{ gold_first_order_products : "first order"
+  gold_customer_orders ||--o{ gold_discount_analysis : "order_id"
+  gold_customer_profiles ||--o{ gold_discount_analysis : "LTV metrics"
+  gold_customer_profiles ||--|| gold_churn_features : "customer_id"
+  gold_customer_orders ||--o{ gold_churn_features : "survival"
+  gold_customer_profiles ||--o{ gold_geographic_segments : "customer_id"
+  gold_customer_orders ||--o{ gold_retention_cohorts : "cohort"
   gold_customer_profiles ||--o{ gold_customer_orders : customer_id
   gold_customer_orders ||--o{ gold_first_order_products : first_order
   gold_customer_orders ||--o{ gold_discount_analysis : order_id
@@ -375,6 +396,8 @@ For reference, this diagram shows how the Silver source tables flow into and bui
 
 ```mermaid
 erDiagram
+  direction TB
+
   %% Silver Tables
   silver_orders {
     string ID PK
@@ -431,6 +454,25 @@ erDiagram
   }
 
   %% Silver to Gold pipelines / builds
+  silver_orders ||--o{ gold_customer_orders : "builds"
+  silver_order_discounts_lookup ||--o{ gold_customer_orders : "enriches"
+  silver_products ||--o{ gold_first_order_products : "Variant SKU to variant_sku"
+  silver_customer_id_bridge ||--o{ gold_churn_features : "is_subscriber"
+  silver_recharge_orders ||--|| gold_subscription_behaviour : "customer_id"
+  silver_recharge_churned ||--o{ gold_subscription_behaviour : "churn flag"
+  silver_recharge_reactivated ||--o{ gold_subscription_behaviour : "reactivation"
+  silver_customer_id_bridge ||--o{ gold_subscription_behaviour : "bridge"
+
+  %% Gold Internal Connections
+  gold_customer_orders ||--|| gold_customer_profiles : "customer_id"
+  gold_customer_orders ||--o{ gold_first_order_products : "first order"
+  gold_customer_orders ||--o{ gold_discount_analysis : "order_id"
+  gold_customer_profiles ||--o{ gold_discount_analysis : "LTV metrics"
+  gold_customer_profiles ||--|| gold_churn_features : "customer_id"
+  gold_customer_orders ||--o{ gold_churn_features : "survival"
+  gold_customer_profiles ||--o{ gold_geographic_segments : "customer_id"
+  gold_customer_orders ||--o{ gold_retention_cohorts : "cohort"
+```
   silver_orders }o--|| gold_customer_orders : builds
   silver_order_discounts_lookup ||--o{ gold_customer_orders : enriches
   silver_products ||--o{ gold_first_order_products : sku

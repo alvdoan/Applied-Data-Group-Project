@@ -110,3 +110,47 @@ Slide-ready interpretation:
 
 > The cleaned Shopify and Recharge datasets are strong at the order level, but cross-platform customer analysis depends on the Shopify order ID bridge. Recharge identity resolution is high at 96%, but unresolved Recharge-only customers, guest checkout records, and missing email/phone identifiers should be flagged as lower reliability for customer-level and subscription analysis.
 
+---
+
+## ## DS1 - Repeat Purchase Prediction (Sections 1–6) Outputs
+
+In addition to the infrastructure metrics, we have fully implemented **`05_ds1_repeat_purchase_prediction.ipynb`** in the workspace root. This notebook builds the customer-level modeling features, performs exploratory data analysis, trains and compares machine learning models, and establishes key project findings.
+
+### How To Run
+
+You can execute the entire predictive pipeline in either of two ways:
+
+1. **Jupyter Notebook Interface (Recommended)**:
+   * Open **`05_ds1_repeat_purchase_prediction.ipynb`** in your Jupyter Notebook or Jupyter Lab editor.
+   * Click **"Run All"**.
+   * *Self-Healing Feature*: The notebook has a built-in pre-run cell that checks if you have the prerequisite files in `medallion/silver/` and `medallion/gold/`. If they are missing, it automatically compiles and runs the Medallion sequence locally to populate the databases!
+
+2. **Programmatic Pipeline Script (Execute Everything with 1 Command)**:
+   * Run the sequencing script directly from PowerShell using your Conda Python environment:
+     ```powershell
+     D:\Programs\Conda\Conda\python.exe scripts/run_notebooks.py
+     ```
+   * **What it does**: This single command executes all data cleaning, customer ID bridging, gold layer aggregations, product & discount feature engineering, exploratory data analysis, chart rendering, and machine learning training (Logistic Regression + Random Forest).
+   * **Outputs**: All Parquet files, exploratory plots, model confusion matrices, and the feature importance chart are generated and saved to `outputs/` automatically. No additional notebook steps are required!
+
+### Outputs Created
+
+Running the notebook automatically generates the following deliverables inside your **`outputs/`** directory:
+
+1. **Analytical Data Table**:
+   * `outputs/05_features_repeat_purchase.parquet` - The complete, cleaned, B2B-filtered customer features table ($13,908$ retail customer rows).
+
+2. **Exploratory Visualizations (Section 4)**:
+   * `outputs/chart_4_1_channel_repeat.png` - 90-Day Repeat Rate by Customer Acquisition Channel (Bar chart with overall baseline line).
+   * `outputs/chart_4_2_category_repeat.png` - 90-Day Repeat Rate by First Product Category ($N \ge 30$).
+   * `outputs/chart_4_3_discount_tier_repeat.png` - 90-Day Repeat Rate by first order Discount Tier (ordered with customer count annotations).
+   * `outputs/chart_4_4_subscription_repeat.png` - 90-Day Repeat Rate: Subscribers vs Non-Subscribers.
+   * `outputs/chart_4_5_spend_density.png` - First Order Spend Distribution by Repeat Outcome (overlapping KDE plot).
+   * `outputs/chart_4_6_product_formats_repeat.png` - Side-by-side repeat rate comparison for Bundles and Whey protein formats.
+
+3. **Model Evaluations & Importances (Section 5)**:
+   * `outputs/cm_logistic_regression.png` - Heatmap confusion matrix for the Logistic Regression model.
+   * `outputs/cm_random_forest.png` - Heatmap confusion matrix for the Random Forest model.
+   * `outputs/chart_5_4_feature_importances.png` - Horizontal bar chart showing the **Top 15 Feature Importances** from the champion Random Forest model.
+
+

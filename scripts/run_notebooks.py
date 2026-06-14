@@ -61,16 +61,22 @@ def convert_and_run(nb_path):
     env["PYTHONIOENCODING"] = "utf-8"
     env["PYTHONUTF8"] = "1"
     
-    result = subprocess.run([python_exe, str(py_path)], cwd=str(BASE), capture_output=True, text=True, env=env)
+    result = subprocess.run(
+        [python_exe, str(py_path)],
+        cwd=str(BASE),
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        env=env,
+    )
     
     # Clean up script first so we don't leave messy intermediate files
     if py_path.exists():
         os.remove(py_path)
         
-    # Safe printing to avoid console cp1252 errors on model print redirects
-    encoding = sys.stdout.encoding or 'cp1252'
-    safe_stdout = result.stdout.encode(encoding, errors='replace').decode(encoding)
-    safe_stderr = result.stderr.encode(encoding, errors='replace').decode(encoding)
+    safe_stdout = result.stdout or ""
+    safe_stderr = result.stderr or ""
         
     if result.returncode != 0:
         print(f"[ERROR] Error executing {nb_path.name}!")
@@ -84,7 +90,8 @@ def convert_and_run(nb_path):
         print("Output snippet:")
         lines = safe_stdout.strip().split("\n")
         for line in lines[-15:]:
-            print(f"  {line}")
+            # Avoid Windows cp1252 console crashes on unicode from notebook output
+            print(line.encode("ascii", errors="replace").decode("ascii"))
 
 if __name__ == "__main__":
     # Order of execution based on dependency graph (Sequencing all layers to predictive output)
@@ -93,9 +100,12 @@ if __name__ == "__main__":
         BASE / "03_gold_customer_orders.ipynb",
         BASE / "03_gold_customer_profiles.ipynb",
         BASE / "03_gold_first_order_products.ipynb",
-        BASE / "03_gold_subscription_behavior.ipynb",
+        BASE / "03_gold_subscription_behaviour.ipynb",
         BASE / "03_gold_discount_analysis.ipynb",
-        BASE / "05_ds1_repeat_purchase_prediction.ipynb",  # Appended to complete the entire pipeline!
+        BASE / "03_gold_churn_features.ipynb",
+        BASE / "03_gold_geographic_segments.ipynb",
+        BASE / "03_gold_retention_cohorts.ipynb",
+        BASE / "05_ds1_repeat_purchase_prediction.ipynb",
     ]
     
     for nb in notebooks:

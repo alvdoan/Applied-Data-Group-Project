@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-06-16T11:30:20Z",
+  "source_notebook_alignment": "04_clv_decay_forecast.ipynb (approximate filters)",
+  "observation_date": "2026-03-31",
+  "model_population_n": 13518,
+  "bgnbd_params": {
+    "r": 0.08754684908668062,
+    "alpha": 7.22642798592536,
+    "a": 1.6697139052620902,
+    "b": 2.6073217363623247
+  },
+  "gamma_gamma_params": {
+    "p": 2.6554424743874416,
+    "q": 2.019907777708742,
+    "v": 47.87495388191935
+  },
+  "portfolio": {
+    "30d": {
+      "exp_revenue_total": 29054.4566593243,
+      "monthly_rate": 29054.4566593243
+    },
+    "60d": {
+      "exp_revenue_total": 54552.40623823133,
+      "monthly_rate": 27276.203119115664
+    },
+    "90d": {
+      "exp_revenue_total": 77784.47091874976,
+      "monthly_rate": 25928.15697291659
+    },
+    "180d": {
+      "exp_revenue_total": 138472.38681143115,
+      "monthly_rate": 23078.731135238526
+    },
+    "365d": {
+      "exp_revenue_total": 237853.81540793212,
+      "monthly_rate": 19549.628663665655
+    }
+  },
+  "sub_monthly_survival_proxy": {
+    "value": 0.6728616161332238,
+    "formula": "monthly_rate_365d / monthly_rate_30d"
+  }
+}

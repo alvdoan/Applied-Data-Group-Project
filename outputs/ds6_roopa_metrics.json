@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-06-16T11:30:15Z",
+  "source_table": "gold_discount_analysis.parquet",
+  "filters": {
+    "is_first_order": true,
+    "is_b2b_or_affiliate": false
+  },
+  "holiday_churn_trap": {
+    "baseline": {
+      "n": 12940,
+      "one_and_done_rate": 0.6709428129829984,
+      "repeat_rate_90d": 0.22125193199381762
+    },
+    "windows": {
+      "11.11": {
+        "n": 110,
+        "one_and_done_rate": 0.8454545454545455,
+        "repeat_rate_90d": 0.13636363636363635,
+        "repeat_vs_baseline": 0.6163274378433302,
+        "delta_one_and_done_pp": 17.451173247154706,
+        "delta_repeat_pp": -8.488829563018127
+      },
+      "BFCM": {
+        "n": 631,
+        "one_and_done_rate": 0.6767036450079239,
+        "repeat_rate_90d": 0.1901743264659271,
+        "repeat_vs_baseline": 0.8595374727450564,
+        "delta_one_and_done_pp": 0.57608320249255,
+        "delta_repeat_pp": -3.1077605527890517
+      },
+      "12.12": {
+        "n": 34,
+        "one_and_done_rate": 0.6176470588235294,
+        "repeat_rate_90d": 0.20588235294117646,
+        "repeat_vs_baseline": 0.9305335826262044,
+        "delta_one_and_done_pp": -5.329575415946897,
+        "delta_repeat_pp": -1.5369579052641162
+      }
+    },
+    "forecast_month_map_2026": {
+      "2026-11": [
+        "11.11",
+        "BFCM"
+      ],
+      "2026-12": [
+        "12.12"
+      ]
+    }
+  },
+  "repeat_month_multipliers": {
+    "2026-11": 0.8595374727450564,
+    "2026-12": 0.9305335826262044
+  }
+}

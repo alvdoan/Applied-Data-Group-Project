@@ -54,10 +54,25 @@ def load_forecast_params() -> dict:
     1) DEFAULT_FORECAST_PARAMS
     2) configs/forecast_2026_params.json
     3) outputs/ds6_metrics.json
+    4) outputs/ds6_roopa_metrics.json
+    5) outputs/clv_decay_metrics.json (Benny BG/NBD proxy)
     """
     cfg = _load_json_if_exists(BASE / "configs" / "forecast_2026_params.json")
     ds6 = _load_json_if_exists(OUTPUT_DIR / "ds6_metrics.json")
-    params = {**DEFAULT_FORECAST_PARAMS, **cfg, **ds6}
+    roopa = _load_json_if_exists(OUTPUT_DIR / "ds6_roopa_metrics.json")
+    clv = _load_json_if_exists(OUTPUT_DIR / "clv_decay_metrics.json")
+
+    # Normalize optional nested payloads into top-level keys used by the forecast.
+    clv_override = {}
+    if "sub_monthly_survival_proxy" in clv and isinstance(clv["sub_monthly_survival_proxy"], dict):
+        if "value" in clv["sub_monthly_survival_proxy"]:
+            clv_override["sub_monthly_survival"] = clv["sub_monthly_survival_proxy"]["value"]
+
+    roopa_override = {}
+    if "repeat_month_multipliers" in roopa and isinstance(roopa["repeat_month_multipliers"], dict):
+        roopa_override["repeat_month_multipliers"] = roopa["repeat_month_multipliers"]
+
+    params = {**DEFAULT_FORECAST_PARAMS, **cfg, **ds6, **roopa_override, **clv_override}
     return params
 
 CHANNEL_MAP = {
@@ -192,6 +207,7 @@ def build_repeat_revenue(
     repeat_rates: dict,
     first_aov: dict,
     repeat_aov_factor: float = 0.95,
+    repeat_month_multipliers: dict[str, float] | None = None,
 ) -> pd.Series:
     """
     For each forecast month, sum expected repeat revenue from cohorts acquired
@@ -215,6 +231,12 @@ def build_repeat_revenue(
                 rate = repeat_rates[ch] / 3  # spread 90d repeat across 3 months
                 aov = first_aov[ch] * repeat_aov_factor
                 total_repeat += n * rate * aov
+
+        # Optional month-specific multiplier (e.g., holiday churn trap adjustments).
+        if repeat_month_multipliers:
+            mult = float(repeat_month_multipliers.get(str(m), 1.0))
+            total_repeat *= mult
+
         repeat_by_month[m] = total_repeat
 
     return pd.Series(repeat_by_month, name="repeat_revenue")
@@ -496,7 +518,12 @@ def main():
 
     months_2026 = pd.period_range("2026-01", "2026-12", freq="M")
     new_acq = build_new_acq_revenue(projected, params["first_aov"])
-    repeat_rev = build_repeat_revenue(projected, params["repeat_rates"], params["first_aov"])
+    repeat_rev = build_repeat_revenue(
+        projected,
+        params["repeat_rates"],
+        params["first_aov"],
+        repeat_month_multipliers=forecast_params.get("repeat_month_multipliers"),
+    )
     params["promo_gap_pp"] = float(forecast_params["promo_gap_pp"])
     params["promo_lost_revenue_per_cohort"] = float(forecast_params["promo_lost_revenue_per_cohort"])
     params["lazada_winback_conservative"] = float(forecast_params["lazada_winback_conservative"])

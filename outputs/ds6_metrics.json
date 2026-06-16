@@ -1,0 +1,11 @@
+{
+  "promo_gap_pp": 0.015806827089816372,
+  "promo_lost_revenue_per_cohort": 585.2920525983257,
+  "ds6_debug": {
+    "full_price_rate": 0.24202247191011236,
+    "high_mag_rate": 0.226215644820296,
+    "n_high_mag_customers": 473,
+    "avg_order_val": 83.61315037118938,
+    "lost_repeat_customers": 7
+  }
+}

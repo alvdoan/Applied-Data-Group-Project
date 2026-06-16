@@ -4,6 +4,7 @@ Run from project root: python scripts/build_forecast_2026.py
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -16,16 +17,48 @@ OUTPUT_DIR = BASE / "outputs"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 # ---------------------------------------------------------------------------
-# Constants from teammate notebooks (DS1, DS3-1, DS6)
+# Forecast parameter defaults.
+#
+# These were originally hardcoded constants. They are now loaded from:
+# - configs/forecast_2026_params.json (tracked, editable)
+# - outputs/ds6_metrics.json (generated from DS6 notebook logic)
+#
+# If those files are missing, we fall back to these defaults.
 # ---------------------------------------------------------------------------
 OVERALL_REPEAT_RATE = 0.2191
-PROMO_GAP_PP = 0.0411
-PROMO_LOST_REVENUE_PER_COHORT = 2626.0
 SUBSCRIBER_REPEAT_RATE = 0.85
 NON_SUBSCRIBER_REPEAT_RATE = 0.195
-LAZADA_WINBACK_CONSERVATIVE = 9776.0
-LAZADA_WINBACK_UPSIDE = 43652.79
-SUB_MONTHLY_SURVIVAL = 0.95  # proxy until Benny BG/NBD decay curve
+
+DEFAULT_FORECAST_PARAMS = {
+    "promo_gap_pp": 0.0411,
+    "promo_lost_revenue_per_cohort": 2626.0,
+    "lazada_winback_conservative": 9776.0,
+    "lazada_winback_upside": 43652.79,
+    # Proxy until the BG/NBD decay curve is wired in.
+    "sub_monthly_survival": 0.95,
+}
+
+
+def _load_json_if_exists(path: Path) -> dict:
+    if path.exists():
+        with path.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def load_forecast_params() -> dict:
+    """
+    Load forecast parameters from config + generated DS6 outputs.
+
+    Priority order (later overrides earlier):
+    1) DEFAULT_FORECAST_PARAMS
+    2) configs/forecast_2026_params.json
+    3) outputs/ds6_metrics.json
+    """
+    cfg = _load_json_if_exists(BASE / "configs" / "forecast_2026_params.json")
+    ds6 = _load_json_if_exists(OUTPUT_DIR / "ds6_metrics.json")
+    params = {**DEFAULT_FORECAST_PARAMS, **cfg, **ds6}
+    return params
 
 CHANNEL_MAP = {
     "DTC": "DTC",
@@ -101,13 +134,8 @@ def extract_parameters(base: pd.DataFrame, subs: pd.DataFrame) -> dict:
 
     return {
         "overall_repeat_rate": OVERALL_REPEAT_RATE,
-        "promo_gap_pp": PROMO_GAP_PP,
-        "promo_lost_revenue_per_cohort": PROMO_LOST_REVENUE_PER_COHORT,
         "subscriber_repeat_rate": SUBSCRIBER_REPEAT_RATE,
         "non_subscriber_repeat_rate": NON_SUBSCRIBER_REPEAT_RATE,
-        "lazada_winback_conservative": LAZADA_WINBACK_CONSERVATIVE,
-        "lazada_winback_upside": LAZADA_WINBACK_UPSIDE,
-        "sub_monthly_survival": SUB_MONTHLY_SURVIVAL,
         "repeat_rates": repeat_rates,
         "first_aov": first_aov,
         "active_subscribers": active_subs,
@@ -459,6 +487,7 @@ def run_validation(
 
 
 def main():
+    forecast_params = load_forecast_params()
     cp, co, subs, cohorts_ch = load_data()
     base = prepare_customer_base(cp, co)
     params = extract_parameters(base, subs)
@@ -468,6 +497,12 @@ def main():
     months_2026 = pd.period_range("2026-01", "2026-12", freq="M")
     new_acq = build_new_acq_revenue(projected, params["first_aov"])
     repeat_rev = build_repeat_revenue(projected, params["repeat_rates"], params["first_aov"])
+    params["promo_gap_pp"] = float(forecast_params["promo_gap_pp"])
+    params["promo_lost_revenue_per_cohort"] = float(forecast_params["promo_lost_revenue_per_cohort"])
+    params["lazada_winback_conservative"] = float(forecast_params["lazada_winback_conservative"])
+    params["lazada_winback_upside"] = float(forecast_params["lazada_winback_upside"])
+    params["sub_monthly_survival"] = float(forecast_params["sub_monthly_survival"])
+
     sub_rev = build_subscription_revenue(params, months_2026)
 
     # Scenarios
@@ -475,7 +510,7 @@ def main():
 
     # +4.11pp uplift on repeat layer => multiplier = (baseline + gap) / baseline on repeat only
     baseline_repeat_annual = status_quo["repeat_revenue"].sum()
-    uplift_multiplier = 1 + (PROMO_GAP_PP / OVERALL_REPEAT_RATE)
+    uplift_multiplier = 1 + (params["promo_gap_pp"] / OVERALL_REPEAT_RATE)
     second_purchase = assemble_scenario(
         months_2026, new_acq, repeat_rev, sub_rev,
         "Second-Purchase Push", repeat_multiplier=uplift_multiplier,
@@ -484,7 +519,7 @@ def main():
     lazada_winback = assemble_scenario(
         months_2026, new_acq, repeat_rev, sub_rev,
         "Lazada Win-back",
-        winback_lump=LAZADA_WINBACK_CONSERVATIVE,
+        winback_lump=params["lazada_winback_conservative"],
         winback_month="2026-03",
     )
 

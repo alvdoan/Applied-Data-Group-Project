@@ -353,42 +353,95 @@ def write_assumptions_md(params: dict, hist: pd.DataFrame, assumptions_path: Pat
   assumptions_path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def plot_scenarios(all_scenarios: pd.DataFrame, output_path: Path):
-    fig, ax = plt.subplots(figsize=(12, 6))
-    months_str = all_scenarios["month"].astype(str)
+def historical_monthly_total_revenue(co: pd.DataFrame, start: str = "2024-01") -> pd.Series:
+    """Sum of all order revenue by calendar month (actuals from gold orders)."""
+    orders = co.copy()
+    orders["order_month"] = (
+        pd.to_datetime(orders["processed_at"], utc=True, errors="coerce")
+        .dt.tz_localize(None)
+        .dt.to_period("M")
+    )
+    monthly = (
+        orders.dropna(subset=["order_month"])
+        .groupby("order_month")["price_total"]
+        .sum()
+        .sort_index()
+    )
+    return monthly.loc[monthly.index >= start]
+
+
+def plot_scenarios(
+    all_scenarios: pd.DataFrame,
+    output_path: Path,
+    actual_revenue: pd.Series | None = None,
+    history_start: str = "2024-01",
+    forecast_start: str = "2026-01",
+):
+    """Monthly revenue chart: solid actuals + dashed/dotted forecast scenarios."""
+    fig, ax = plt.subplots(figsize=(14, 6))
+
+    if actual_revenue is not None and len(actual_revenue) > 0:
+        hist = actual_revenue.sort_index()
+        ax.plot(
+            hist.index.astype(str),
+            hist.values,
+            label="Actual revenue",
+            color="#374151",
+            linewidth=2.5,
+            linestyle="-",
+            marker="o",
+            markersize=5,
+            zorder=3,
+        )
+
+    sq_total = all_scenarios[all_scenarios["scenario"] == "Status Quo"]["total_revenue"].sum()
+    sp_total = all_scenarios[all_scenarios["scenario"] == "Second-Purchase Push"]["total_revenue"].sum()
+    delta = sp_total - sq_total
 
     for scenario, color in [
         ("Status Quo", "#6366f1"),
         ("Second-Purchase Push", "#22c55e"),
         ("Lazada Win-back", "#f59e0b"),
     ]:
-        sub = all_scenarios[all_scenarios["scenario"] == scenario].copy()
-        sub = sub.sort_values("month")
-        cum = sub["total_revenue"].cumsum()
+        sub = all_scenarios[all_scenarios["scenario"] == scenario].copy().sort_values("month")
         ax.plot(
             sub["month"].astype(str),
-            cum,
-            label=scenario,
+            sub["total_revenue"],
+            label=f"{scenario} (forecast)",
             color=color,
-            linewidth=2.5,
+            linewidth=2,
+            linestyle="--",
             marker="o",
-            markersize=4,
+            markersize=5,
+            markerfacecolor="white",
+            markeredgewidth=1.5,
+            markeredgecolor=color,
+            zorder=2,
         )
 
-    sq_total = all_scenarios[all_scenarios["scenario"] == "Status Quo"]["total_revenue"].sum()
-    sp_total = all_scenarios[all_scenarios["scenario"] == "Second-Purchase Push"]["total_revenue"].sum()
-    delta = sp_total - sq_total
+    ax.axvline(x=forecast_start, color="#9ca3af", linestyle=":", linewidth=1.5, alpha=0.9)
+    ymax = ax.get_ylim()[1]
+    ax.text(
+        forecast_start,
+        ymax * 0.97 if ymax > 0 else 1,
+        "  Forecast →",
+        va="top",
+        ha="left",
+        fontsize=9,
+        color="#6b7280",
+    )
+
     ax.set_title(
-        f"2026 Cumulative Revenue Forecast by Scenario\n"
-        f"Second-Purchase Push uplift vs Status Quo: SGD {delta:,.0f}",
+        f"Monthly Revenue: Actuals vs 2026 Forecast Scenarios\n"
+        f"Second-Purchase Push annual uplift vs Status Quo: SGD {delta:,.0f}",
         fontsize=13,
         fontweight="bold",
     )
     ax.set_xlabel("Month")
-    ax.set_ylabel("Cumulative Revenue (SGD)")
-    ax.legend()
+    ax.set_ylabel("Monthly Revenue (SGD)")
+    ax.legend(loc="upper right", fontsize=9)
     ax.grid(alpha=0.3)
-    plt.xticks(rotation=45)
+    plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
     plt.savefig(output_path, dpi=150, bbox_inches="tight")
     plt.close()
@@ -563,7 +616,12 @@ def main():
     write_assumptions_md(params, hist, OUTPUT_DIR / "forecast_assumptions.md")
 
     # Charts
-    plot_scenarios(all_scenarios, OUTPUT_DIR / "forecast_2026_scenarios.png")
+    actual_revenue = historical_monthly_total_revenue(co, start="2024-01")
+    plot_scenarios(
+        all_scenarios,
+        OUTPUT_DIR / "forecast_2026_scenarios.png",
+        actual_revenue=actual_revenue,
+    )
     annual = plot_delta(all_scenarios, OUTPUT_DIR / "forecast_2026_delta.png")
 
     # Validation

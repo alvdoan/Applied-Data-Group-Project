@@ -1,0 +1,39 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              customers   R-squared:                       0.809
+Model:                            OLS   Adj. R-squared:                  0.601
+Method:                 Least Squares   F-statistic:                     3.889
+Date:                Thu, 18 Jun 2026   Prob (F-statistic):             0.0159
+Time:                        03:36:30   Log-Likelihood:                -132.34
+No. Observations:                  24   AIC:                             290.7
+Df Residuals:                      11   BIC:                             306.0
+Df Model:                          12                                         
+Covariance Type:            nonrobust                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+Intercept             -8.8750     65.293     -0.136      0.894    -152.585     134.835
+C(cal_month)[T.2]     -4.1458     88.767     -0.047      0.964    -199.522     191.230
+C(cal_month)[T.3]      7.5469     55.494      0.136      0.894    -114.594     129.688
+C(cal_month)[T.4]    191.5625     89.177      2.148      0.055      -4.715     387.840
+C(cal_month)[T.5]    214.9167     89.534      2.400      0.035      17.854     411.979
+C(cal_month)[T.6]    151.7708     89.991      1.687      0.120     -46.297     349.839
+C(cal_month)[T.7]    278.1250     90.546      3.072      0.011      78.836     477.414
+C(cal_month)[T.8]    163.4792     91.197      1.793      0.101     -37.244     364.203
+C(cal_month)[T.9]    164.3333     91.943      1.787      0.101     -38.032     366.699
+C(cal_month)[T.10]    99.1875     92.782      1.069      0.308    -105.023     303.398
+C(cal_month)[T.11]   118.8802     55.821      2.130      0.057      -3.981     241.742
+C(cal_month)[T.12]   -80.7656     56.591     -1.427      0.181    -205.322      43.790
+t                     10.6458      3.018      3.527      0.005       4.003      17.289
+promo                 45.6615     57.032      0.801      0.440     -79.865     171.188
+==============================================================================
+Omnibus:                        3.741   Durbin-Watson:                   1.551
+Prob(Omnibus):                  0.154   Jarque-Bera (JB):                1.431
+Skew:                           0.000   Prob(JB):                        0.489
+Kurtosis:                       1.804   Cond. No.                     2.32e+17
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 8.09e-32. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

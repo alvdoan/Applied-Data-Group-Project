@@ -1,8 +1,18 @@
 {
+  "forecast_version": "v2",
   "promo_gap_pp": 0.0411,
   "promo_lost_revenue_per_cohort": 2626.0,
   "lazada_winback_conservative": 9776.0,
   "lazada_winback_upside": 43652.79,
-  "sub_monthly_survival": 0.95
+  "sub_monthly_survival": 0.95,
+  "promo_rate_reduction_factor": 0.7,
+  "lazada_mix_shift_pp": 0.07,
+  "seasonal_hist_start": "2024-01",
+  "acquisition_forecast": {
+    "hist_start": "2024-01",
+    "end_train": "2025-12",
+    "ewma_alpha": 0.35,
+    "ewma_growth_window": 6,
+    "mix_window": 3
+  }
 }
-

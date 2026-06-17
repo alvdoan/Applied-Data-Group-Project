@@ -111,6 +111,14 @@ def main() -> dict:
     # Proxy “survival” (steady-state ratio).
     sub_monthly_survival = float(monthly_rates[365] / monthly_rates[30]) if monthly_rates[30] else 0.95
 
+    months_2026 = pd.period_range("2026-01", "2026-12", freq="M")
+    subscription_forecast: dict[str, float] = {}
+    rates = [float(portfolio.get(f"{h}d", {}).get("monthly_rate", 0.0)) for h in horizons]
+    if any(rates):
+        for i, m in enumerate(months_2026, start=1):
+            days = min(i * 30, 365)
+            subscription_forecast[str(m)] = float(np.interp(days, horizons, rates))
+
     payload = {
         "generated_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
         "source_notebook_alignment": "04_clv_decay_forecast.ipynb (approximate filters)",
@@ -123,6 +131,7 @@ def main() -> dict:
             "value": sub_monthly_survival,
             "formula": "monthly_rate_365d / monthly_rate_30d",
         },
+        "subscription_forecast_monthly_2026": subscription_forecast,
     }
 
     out_path = out_dir / "clv_decay_metrics.json"

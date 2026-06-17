@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T15:44:22Z",
+  "generated_at": "2026-06-17T18:50:29Z",
   "source_table": "gold_discount_analysis.parquet",
   "filters": {
     "is_first_order": true,
@@ -50,5 +50,32 @@
   "repeat_month_multipliers": {
     "2026-11": 0.8595374727450564,
     "2026-12": 0.9305335826262044
-  }
+  },
+  "scenario_simulation": {
+    "aov": 81.55434050309879,
+    "promo_gap_pp": 0.04110123842521626,
+    "projected_new_customers_2026": 13715,
+    "discount_acq_rate_status_quo": 0.053809697411593145,
+    "discount_acq_rate_risk": 0.1,
+    "pivot_gap_closure_pct": 0.5,
+    "status_quo": {
+      "discount_cohort_size": 738,
+      "lost_repeat_customers": 30,
+      "lost_revenue_per_cohort": 2446.6302150929637,
+      "annual_leakage": 9786.520860371855
+    },
+    "risk": {
+      "discount_cohort_size": 1372,
+      "lost_repeat_customers": 56,
+      "lost_revenue_per_cohort": 4567.043068173532,
+      "annual_leakage": 18268.17227269413
+    },
+    "pivot": {
+      "recovered_repeat_customers": 15,
+      "recovered_revenue_per_cohort": 1223.3151075464818,
+      "annual_recovery": 4893.260430185927
+    },
+    "annual_recovery_pivot": 4893.260430185927
+  },
+  "annual_recovery_pivot": 4893.260430185927
 }

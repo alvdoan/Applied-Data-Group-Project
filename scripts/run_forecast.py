@@ -20,6 +20,7 @@ STEPS = [
     [PY, str(BASE / "scripts" / "build_forecast_2026.py")],
     [PY, str(BASE / "scripts" / "forecast_backtest.py")],
     [PY, str(BASE / "scripts" / "forecast_acquisition_compare.py")],
+    [PY, str(BASE / "scripts" / "build_forecast_scenarios.py")],
 ]
 
 

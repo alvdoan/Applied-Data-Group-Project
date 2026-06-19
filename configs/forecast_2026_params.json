@@ -13,6 +13,7 @@
     "end_train": "2025-12",
     "ewma_alpha": 0.35,
     "ewma_growth_window": 6,
-    "mix_window": 3
+    "mix_window": 3,
+    "scenario_methods": ["regression", "holt_winters"]
   }
 }

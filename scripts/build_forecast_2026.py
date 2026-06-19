@@ -542,6 +542,172 @@ def build_forecast(
     return all_scenarios, params, hist, projected
 
 
+# ---------------------------------------------------------------------------
+# v3 — regression / Holt-Winters acquisition + v2 revenue layers
+# ---------------------------------------------------------------------------
+
+def build_forecast_with_acquisition(
+    acquisition_method: str,
+    end_train: str | None = None,
+    cp: pd.DataFrame | None = None,
+    co: pd.DataFrame | None = None,
+    subs: pd.DataFrame | None = None,
+    cohorts_ch: pd.DataFrame | None = None,
+    base: pd.DataFrame | None = None,
+    write_outputs: bool = True,
+):
+    from acquisition_forecast import load_acq_params, project_acquisition_channels
+
+    if acquisition_method not in ("regression", "holt_winters"):
+        raise ValueError(f"acquisition_method must be regression or holt_winters, got {acquisition_method!r}")
+
+    forecast_params = load_forecast_params()
+    acq_params = load_acq_params()
+    end_train = end_train or acq_params["end_train"]
+
+    if cp is None:
+        cp, co, subs, cohorts_ch = load_data()
+    if base is None:
+        base = prepare_customer_base(cp, co)
+
+    params = extract_parameters(base, subs, forecast_params)
+    hist = historical_monthly_acquisitions(
+        base, start=acq_params.get("hist_start", "2024-01"), end=end_train,
+    )
+    months_2026 = pd.period_range("2026-01", "2026-12", freq="M")
+    repeat_mult = forecast_params.get("repeat_month_multipliers")
+
+    projected_sq = project_acquisition_channels(
+        acquisition_method, hist, months_2026, FORECAST_CHANNELS, acq_params,
+    )
+    projected_lazada = apply_lazada_mix_shift(projected_sq, params["lazada_mix_shift_pp"])
+    promo_sq = params["promo_acq_rate"]
+    promo_sp = params["promo_acq_rate"] * params["promo_rate_reduction_factor"]
+
+    repeat_sq = build_repeat_revenue_cohort(
+        projected_sq, params["repeat_rates"], params["first_aov"],
+        promo_acq_rate=promo_sq, promo_repeat_ratio=params["promo_repeat_ratio"],
+        repeat_month_multipliers=repeat_mult,
+    )
+    repeat_lazada = build_repeat_revenue_cohort(
+        projected_lazada, params["repeat_rates"], params["first_aov"],
+        promo_acq_rate=promo_sq, promo_repeat_ratio=params["promo_repeat_ratio"],
+        repeat_month_multipliers=repeat_mult,
+    )
+    repeat_sp = build_repeat_revenue_cohort(
+        projected_sq, params["repeat_rates"], params["first_aov"],
+        promo_acq_rate=promo_sp, promo_repeat_ratio=params["promo_repeat_ratio"],
+        repeat_month_multipliers=repeat_mult,
+    )
+    sub_rev = build_subscription_revenue_v2(params, months_2026, forecast_params)
+
+    new_acq_sq = build_new_acq_revenue(projected_sq, params["first_aov"])
+    new_acq_lazada = build_new_acq_revenue(projected_lazada, params["first_aov"])
+
+    status_quo = assemble_scenario(months_2026, new_acq_sq, repeat_sq, sub_rev, "Status Quo")
+    pivot_monthly = params["annual_recovery_pivot"] / 12.0
+    second_purchase = assemble_scenario(
+        months_2026, new_acq_sq, repeat_sp, sub_rev,
+        "Second-Purchase Push", repeat_monthly_addon=pivot_monthly,
+    )
+    lazada_winback = assemble_scenario(
+        months_2026, new_acq_lazada, repeat_lazada, sub_rev,
+        "Lazada Win-back",
+        winback_lump=params["lazada_winback_conservative"],
+        winback_month="2026-03",
+    )
+    all_scenarios = pd.concat([status_quo, second_purchase, lazada_winback], ignore_index=True)
+
+    version_label = f"v3 ({acquisition_method})"
+    if write_outputs:
+        _write_scenario_outputs_for_method(
+            all_scenarios, params, hist, co, projected_sq, acquisition_method,
+            forecast_params, cohorts_ch, version_label,
+        )
+
+    return all_scenarios, params, hist, projected_sq
+
+
+def _write_scenario_outputs_for_method(
+    all_scenarios,
+    params,
+    hist,
+    co,
+    projected,
+    acquisition_method,
+    forecast_params,
+    cohorts_ch,
+    version_label,
+):
+    suffix = acquisition_method
+    all_scenarios.to_csv(OUTPUT_DIR / f"forecast_2026_monthly_{suffix}.csv", index=False)
+    sq = all_scenarios[all_scenarios["scenario"] == "Status Quo"]
+    sq.to_csv(OUTPUT_DIR / f"forecast_2026_monthly_baseline_{suffix}.csv", index=False)
+    projected.to_csv(OUTPUT_DIR / f"forecast_2026_acquisition_by_channel_{suffix}.csv", index=False)
+    actual_revenue = historical_monthly_total_revenue(co, start="2024-01")
+    plot_scenarios(
+        all_scenarios,
+        OUTPUT_DIR / f"forecast_2026_scenarios_{suffix}.png",
+        actual_revenue=actual_revenue,
+        version=version_label,
+    )
+    annual = plot_delta(all_scenarios, OUTPUT_DIR / f"forecast_2026_delta_{suffix}.png")
+    plot_stacked_status_quo(sq, OUTPUT_DIR / f"forecast_2026_stacked_status_quo_{suffix}.png")
+    plot_acquisition_seasonality(hist, projected, OUTPUT_DIR / f"forecast_2026_acquisition_seasonality_{suffix}.png")
+    checks = run_validation(all_scenarios, params, projected, hist, cohorts_ch, version_label)
+    return annual, checks
+
+
+def run_acquisition_scenario_forecasts(
+    methods: tuple[str, ...] = ("regression", "holt_winters"),
+    end_train: str | None = None,
+) -> dict:
+    """Build 3-scenario revenue forecasts for each acquisition method; write separate charts."""
+    cp, co, subs, cohorts_ch = load_data()
+    base = prepare_customer_base(cp, co)
+    results = {}
+    summary_lines = [
+        "# 2026 Revenue Scenarios by Acquisition Method",
+        "",
+        "Three scenarios (Status Quo, Second-Purchase Push, Lazada Win-back) with v2 repeat/subscription layers.",
+        "",
+        "| Acquisition method | Status Quo | Second-Purchase Push | Lazada Win-back | SP uplift | LZ uplift |",
+        "|--------------------|------------|----------------------|-----------------|-----------|-----------|",
+    ]
+
+    for method in methods:
+        all_scenarios, params, hist, projected = build_forecast_with_acquisition(
+            method,
+            end_train=end_train,
+            cp=cp, co=co, subs=subs, cohorts_ch=cohorts_ch, base=base,
+            write_outputs=True,
+        )
+        totals = all_scenarios.groupby("scenario")["total_revenue"].sum()
+        sq, sp, lz = totals["Status Quo"], totals["Second-Purchase Push"], totals["Lazada Win-back"]
+        summary_lines.append(
+            f"| {method} | SGD {sq:,.0f} | SGD {sp:,.0f} | SGD {lz:,.0f} "
+            f"| +{sp - sq:,.0f} | +{lz - sq:,.0f} |"
+        )
+        checks = run_validation(all_scenarios, params, projected, hist, cohorts_ch, f"v3-{method}")
+        results[method] = {"scenarios": all_scenarios, "totals": totals, "checks": checks}
+        print(f"\n=== {method} acquisition — 2026 scenario totals ===")
+        for s, t in totals.items():
+            print(f"  {s}: SGD {t:,.0f}")
+        print(f"  Second-Purchase Push uplift: SGD {sp - sq:,.0f}")
+        print(f"  Lazada Win-back uplift: SGD {lz - sq:,.0f}")
+
+    summary_lines += [
+        "",
+        "## Outputs",
+        "",
+        "- `forecast_2026_scenarios_regression.png` — monthly revenue, 3 scenarios",
+        "- `forecast_2026_scenarios_holt_winters.png` — monthly revenue, 3 scenarios",
+        "- Matching delta and stacked charts per method",
+    ]
+    (OUTPUT_DIR / "forecast_scenarios_by_acquisition.md").write_text("\n".join(summary_lines), encoding="utf-8")
+    return results
+
+
 def _write_all_outputs(all_scenarios, params, hist, co, projected, forecast_params, version, cohorts_ch):
     all_scenarios.to_csv(OUTPUT_DIR / "forecast_2026_monthly.csv", index=False)
     sq = all_scenarios[all_scenarios["scenario"] == "Status Quo"]

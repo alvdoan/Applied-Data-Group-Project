@@ -1,0 +1,49 @@
+{
+  "forecast_version": "strategic_v1",
+  "acquisition_method": "regression",
+  "acquisition_forecast": {
+    "hist_start": "2024-01",
+    "end_train": "2025-12",
+    "forecast_start": "2026-01",
+    "forecast_end": "2026-12",
+    "mix_window": 3,
+    "ewma_alpha": 0.35,
+    "ewma_growth_window": 6
+  },
+  "promo_acq_rate": 0.0538,
+  "promo_repeat_ratio": 0.83,
+  "sub_monthly_survival": 0.95,
+  "data_defaults": {
+    "bundle_repeat_rate_90d": 0.3649,
+    "lean_standalone_repeat_rate_90d": 0.2344,
+    "annual_recovery_pivot": 4893.26,
+    "comment": "From 06_prod_bundling.ipynb and ds6_roopa_metrics.json"
+  },
+  "user_inputs": {
+    "bundle_adoption_share_dtc": 0.25,
+    "bundle_discount_pct": 0.10,
+    "bundle_aov_multiplier_vs_dtc": 1.30,
+    "promo_acq_rate_pivot": 0.03,
+    "acq_volume_penalty_per_promo_pp": 0.015,
+    "day30_60_crm_extra_recovery_annual": 0.0,
+    "nov_111_reactivated_customers": 120,
+    "nov_111_flash_order_aov": 72.0
+  },
+  "scenarios": {
+    "status_quo": { "enabled": true },
+    "lean_creatine_dtc_bundle": {
+      "enabled": true,
+      "label": "Lean + Creatine DTC Bundle"
+    },
+    "inverted_funnel_1111": {
+      "enabled": true,
+      "label": "Inverted Funnel + 11.11",
+      "pivot_gap_closure_pct": 0.5,
+      "nov_111_flash": {
+        "mode": "reengagement",
+        "month": "2026-11"
+      }
+    }
+  },
+  "user_inputs_note": "Notebook Cell 1 USER_INPUT overrides user_inputs here for quick what-if runs."
+}

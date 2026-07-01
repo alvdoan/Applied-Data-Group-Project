@@ -114,14 +114,14 @@ Slide-ready interpretation:
 
 ## ## DS1 - Repeat Purchase Prediction (Sections 1–6) Outputs
 
-In addition to the infrastructure metrics, we have fully implemented **`05_ds1_repeat_purchase_prediction.ipynb`** in the workspace root. This notebook builds the customer-level modeling features, performs exploratory data analysis, trains and compares machine learning models, and establishes key project findings.
+In addition to the infrastructure metrics, we have fully implemented **`analysis/04_repeat_purchase_prediction.ipynb`**. This notebook builds the customer-level modeling features, performs exploratory data analysis, trains and compares machine learning models, and establishes key project findings.
 
 ### How To Run
 
 You can execute the entire predictive pipeline in either of two ways:
 
 1. **Jupyter Notebook Interface (Recommended)**:
-   * Open **`05_ds1_repeat_purchase_prediction.ipynb`** in your Jupyter Notebook or Jupyter Lab editor.
+   * Open **`analysis/04_repeat_purchase_prediction.ipynb`** in your Jupyter Notebook or Jupyter Lab editor.
    * Click **"Run All"**.
    * *Self-Healing Feature*: The notebook has a built-in pre-run cell that checks if you have the prerequisite files in `medallion/silver/` and `medallion/gold/`. If they are missing, it automatically compiles and runs the Medallion sequence locally to populate the databases!
 

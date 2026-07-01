@@ -61,7 +61,7 @@ def convert_and_run(nb_path):
     env["PYTHONIOENCODING"] = "utf-8"
     env["PYTHONUTF8"] = "1"
     
-    result = subprocess.run([python_exe, str(py_path)], cwd=str(BASE), capture_output=True, text=True, env=env)
+    result = subprocess.run([python_exe, py_path.name], cwd=str(nb_path.parent), capture_output=True, text=True, env=env)
     
     # Clean up script first so we don't leave messy intermediate files
     if py_path.exists():
@@ -89,13 +89,13 @@ def convert_and_run(nb_path):
 if __name__ == "__main__":
     # Order of execution based on dependency graph (Sequencing all layers to predictive output)
     notebooks = [
-        BASE / "02_silver_cleaning_draft.ipynb",
-        BASE / "03_gold_customer_orders.ipynb",
-        BASE / "03_gold_customer_profiles.ipynb",
-        BASE / "03_gold_first_order_products.ipynb",
-        BASE / "03_gold_subscription_behavior.ipynb",
-        BASE / "03_gold_discount_analysis.ipynb",
-        BASE / "05_ds1_repeat_purchase_prediction.ipynb",  # Appended to complete the entire pipeline!
+        BASE / "medallion" / "silver" / "02_silver_cleaning.ipynb",
+        BASE / "medallion" / "gold" / "03_gold_customer_orders.ipynb",
+        BASE / "medallion" / "gold" / "03_gold_customer_profiles.ipynb",
+        BASE / "medallion" / "gold" / "03_gold_first_order_products.ipynb",
+        BASE / "medallion" / "gold" / "03_gold_subscription_behaviour.ipynb",
+        BASE / "medallion" / "gold" / "03_gold_discount_analysis.ipynb",
+        BASE / "analysis" / "04_repeat_purchase_prediction.ipynb",  # Appended to complete the entire pipeline!
     ]
     
     for nb in notebooks:

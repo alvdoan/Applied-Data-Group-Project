@@ -92,16 +92,19 @@ graph TD
 
 ### 3. Downstream Predictions & Strategic Analyses
 Run the notebooks in the `analysis/` folder to perform strategic deep-dives:
-*   **`04_eda.ipynb`**: Explores baseline distributions of orders, spends, subscription signups, and customer lifespans.
 *   **`04_acquisition_dynamics.ipynb`**: Analyzes cohort Customer Lifetime Value (LTV) and organic vs. discount-driven acquisition.
+*   **`04_business_context_visuals.ipynb`**: Generates high-level business context charts, including revenue growth and channel share evolution.
 *   **`04_category_vtd_brand_evolution.ipynb`**: Tracks category-level Value-to-Date (VTD) and product category preference shifts over time.
 *   **`04_channel_heterogeneity.ipynb`**: Compares customer behavior, AOV, order rates, and retention across DTC, Lazada, Shopee, and Social Referral.
 *   **`04_churn_analysis.ipynb`**: Evaluates customer return windows and churn factors (early conversion vs. replenishment cycles).
 *   **`04_clv_decay_forecast.ipynb`**: Applies BG/NBD and Gamma-Gamma models to forecast future revenue, identify revenue-at-risk, and target lapsed VIPs.
 *   **`04_decile_churn_analysis.ipynb`**: Details the concentration of revenue and retention dynamics among top-decile customer segments.
+*   **`04_eda.ipynb`**: Explores baseline distributions of orders, spends, subscription signups, and customer lifespans.
 *   **`04_interpurchase_timechart.ipynb`**: Maps inter-purchase times (IPT) to establish replenishment consumption windows.
 *   **`04_prod_bundling.ipynb`**: Runs Association Rules Mining (Market Basket Analysis) to find co-purchased SKUs and starter kit opportunities.
 *   **`04_product_sku_analysis.ipynb`**: Reviews individual product margins and country-specific flavor and size (SKU) preferences.
 *   **`04_repeat_decay_analysis.ipynb`**: Evaluates historic, multi-window repeat purchase velocity by channel, category, and country.
 *   **`04_repeat_purchase_prediction.ipynb`**: Trains machine learning models (Logistic Regression & Random Forest) to predict 90-day repeat purchase probabilities.
+*   **`04_targeting_profile.ipynb`**: Profiles the "moveable middle" (D2-D5) customer segments and models first-order predictors of top-decile loyalty.
+
 

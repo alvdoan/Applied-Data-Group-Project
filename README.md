@@ -6,7 +6,7 @@ This repository contains the data engineering pipeline and customer analytics no
 
 ## 📂 Project Directory Structure
 
-The repository has been restructured into clean, self-contained directories:
+The repository is structured into clean, self-contained directories:
 
 *   **[`data/`](file:///Users/bennyteo/Desktop/Benny/MITB/Term%203/ISSS603%20Applied%20Data%20Science%20for%20Customer%20Insights/Project/LushProtein_Project_Data_20260505/data)**: Holds raw customer transaction logs, product master files, campaign reports, discount metadata, and Recharge files.
 *   **[`medallion/`](file:///Users/bennyteo/Desktop/Benny/MITB/Term%203/ISSS603%20Applied%20Data%20Science%20for%20Customer%20Insights/Project/LushProtein_Project_Data_20260505/medallion)**: Medallion layer notebooks organized into subfolders:
